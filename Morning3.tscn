@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cotquykodh1xi"]
+
+[ext_resource type="Texture2D" uid="uid://70pgmpdds4v1" path="res://утро2.png" id="1_2mjmr"]
+
+[node name="Node2D" type="Node2D" unique_id=1437084643]
+
+[node name="Утро2" type="Sprite2D" parent="." unique_id=550997276]
+position = Vector2(576.75, 322.5)
+scale = Vector2(0.8142755, 0.83984375)
+texture = ExtResource("1_2mjmr")

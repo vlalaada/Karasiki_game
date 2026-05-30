@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://de4naw2865pgf"]
+
+[ext_resource type="Script" uid="uid://3qyn4u8ctihs" path="res://scence/evening_2.gd" id="1_hyhmi"]
+[ext_resource type="Texture2D" uid="uid://ciar0b1goxas" path="res://вечер.png" id="1_vhsyc"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="2_icmp6"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="3_hyhmi"]
+[ext_resource type="Texture2D" uid="uid://ytg4chdvn6u8" path="res://счаст.png" id="4_qxy8p"]
+[ext_resource type="Texture2D" uid="uid://51tearf3iig3" path="res://окно для выбора длинное .png" id="5_yjh4a"]
+[ext_resource type="Texture2D" uid="uid://dwmidcpqacvvw" path="res://деньги.png" id="6_bn1ij"]
+[ext_resource type="Texture2D" uid="uid://dtvqqi436he7p" path="res://учебники.png" id="7_7aglt"]
+[ext_resource type="Texture2D" uid="uid://cpm4vsusp5rog" path="res://подушка.png" id="8_qhybk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8j5x"]
+bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9882353, 0.52156866, 0.6117647, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 14
+expand_margin_left = 30.0
+expand_margin_top = 20.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nupw"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1n2y"]
+bg_color = Color(0.89558446, 0.16479081, 0.7327512, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7ow1"]
+bg_color = Color(0.91301095, 0.65000254, 0.7216747, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.93102473, 0, 0.4354593, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hyhmi"]
+bg_color = Color(0.58799785, 0.5877642, 0.7552259, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.711337, 0.4756204, 0.9999973, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1129414983]
+script = ExtResource("1_hyhmi")
+
+[node name="Вечер" type="Sprite2D" parent="." unique_id=461973839]
+position = Vector2(576, 330.00003)
+scale = Vector2(0.82457393, 0.84895843)
+texture = ExtResource("1_vhsyc")
+
+[node name="Счаст" type="Sprite2D" parent="." unique_id=1852017058]
+position = Vector2(117, 70)
+scale = Vector2(0.2730072, 0.27859044)
+texture = ExtResource("2_icmp6")
+
+[node name="Label" type="Label" parent="." unique_id=642035862]
+offset_left = 44.0
+offset_top = 43.0
+offset_right = 200.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0.9411765, 0.23137255, 0.5019608, 1)
+theme_override_fonts/font = ExtResource("3_hyhmi")
+theme_override_font_sizes/font_size = 26
+text = "ДЕНЬ 2
+ВЕЧЕР"
+
+[node name="Счаст2" type="Sprite2D" parent="." unique_id=1705524123]
+position = Vector2(995, 335.00003)
+scale = Vector2(0.7742754, 0.7167552)
+texture = ExtResource("4_qxy8p")
+
+[node name="ОкноДляВыбораДлинное" type="Sprite2D" parent="." unique_id=2116906155]
+position = Vector2(619.5, 53.9375)
+scale = Vector2(0.4528986, 0.2554854)
+texture = ExtResource("5_yjh4a")
+
+[node name="Label2" type="Label" parent="." unique_id=2079160343]
+offset_left = 357.0
+offset_top = 42.0
+offset_right = 884.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hyhmi")
+theme_override_font_sizes/font_size = 17
+text = "Подруга позвала тебя на ночёвку"
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=1203744140]
+
+[node name="Panel" type="Panel" parent="Ui" unique_id=959089878]
+offset_left = 847.0
+offset_top = 490.0
+offset_right = 1143.0
+offset_bottom = 633.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g8j5x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ui/Panel" unique_id=928849153]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=2012240803]
+layout_mode = 2
+
+[node name="LabelMoney" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=472912871]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hyhmi")
+text = "3000 РУБ
+"
+
+[node name="TextureRect" type="TextureRect" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=312363788]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.85
+texture = ExtResource("6_bn1ij")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=215693829]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=1195657958]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hyhmi")
+text = "
+ЭНЕРГИЯ
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=1924243748]
+modulate = Color(0, 0.83192545, 0.44328564, 1)
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+value = 60.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1658554200]
+layout_mode = 2
+
+[node name="LabelHappiness" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=634101180]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hyhmi")
+text = "СЧАСТЬЕ"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=350078342]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/background = SubResource("StyleBoxFlat_4nupw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_y1n2y")
+value = 60.0
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=1304882200]
+position = Vector2(574.99994, 326.50006)
+scale = Vector2(0.66521734, 0.7539894)
+texture = ExtResource("2_icmp6")
+
+[node name="Учебники" type="Sprite2D" parent="." unique_id=1619829105]
+position = Vector2(481, 222)
+scale = Vector2(0.23419741, 0.23632811)
+texture = ExtResource("7_7aglt")
+
+[node name="HomeworkButton" type="Button" parent="Учебники" unique_id=905751080]
+offset_left = -469.6892
+offset_top = 211.57028
+offset_right = 431.1444
+offset_bottom = 1026.277
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hyhmi")
+theme_override_font_sizes/font_size = 88
+theme_override_styles/normal = SubResource("StyleBoxFlat_u7ow1")
+text = "Не пойти
+и сделать
+уроки
++400 руб
+(от мамы)
+-5🤩
+-5⚡"
+
+[node name="Подушка" type="Sprite2D" parent="." unique_id=602881442]
+position = Vector2(690.00006, 227.00002)
+scale = Vector2(0.24200991, 0.20279948)
+texture = ExtResource("8_qhybk")
+
+[node name="SleepoverButton" type="Button" parent="Подушка" unique_id=425472088]
+offset_left = -355.35757
+offset_top = 281.06577
+offset_right = 404.64243
+offset_bottom = 1188.366
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hyhmi")
+theme_override_font_sizes/font_size = 93
+theme_override_styles/normal = SubResource("StyleBoxFlat_u7ow1")
+text = "Пойти
+-200 руб
++20🤩
++15⚡"
+
+[node name="ButtonToNext" type="Button" parent="." unique_id=21691856]
+visible = false
+offset_left = 456.0
+offset_top = 534.0
+offset_right = 711.0
+offset_bottom = 599.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hyhmi")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_hyhmi")
+text = "Далее"
+
+[connection signal="pressed" from="Учебники/HomeworkButton" to="." method="_on_homework_button_pressed"]
+[connection signal="pressed" from="Подушка/SleepoverButton" to="." method="_on_sleepover_button_pressed"]
+[connection signal="pressed" from="ButtonToNext" to="." method="_on_button_to_next_pressed"]

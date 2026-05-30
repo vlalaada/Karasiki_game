@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dgyfcqgbf8asj"]
+
+[ext_resource type="Script" uid="uid://canka0578tqe6" path="res://scence/game.gd" id="1_63lcg"]
+[ext_resource type="Texture2D" uid="uid://btuxayux6o2u2" path="res://мм.jpeg" id="1_yam53"]
+[ext_resource type="Texture2D" uid="uid://3d2wq6r4hcqu" path="res://веселая девочка.png" id="2_63lcg"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="3_baht8"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="4_u7lkv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_577yh"]
+bg_color = Color(0.9655903, 0.7722691, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7694622, 0.42408213, 0.9295625, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D" unique_id=1734597808]
+script = ExtResource("1_63lcg")
+
+[node name="Мм" type="Sprite2D" parent="." unique_id=143289204]
+position = Vector2(573.49994, 325.5)
+scale = Vector2(0.8160511, 0.84244806)
+texture = ExtResource("1_yam53")
+
+[node name="ВеселаяДевочка" type="Sprite2D" parent="." unique_id=832572415]
+position = Vector2(303.99997, 380.00003)
+scale = Vector2(0.776087, 0.71675533)
+texture = ExtResource("2_63lcg")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=232153010]
+position = Vector2(729.75, 230.00002)
+scale = Vector2(0.7467391, 0.5890958)
+texture = ExtResource("3_baht8")
+
+[node name="Label" type="Label" parent="." unique_id=1283450141]
+offset_left = 485.0
+offset_top = 141.0
+offset_right = 1061.0
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_u7lkv")
+theme_override_font_sizes/font_size = 19
+text = "Сейчас ты можешь поиграть в 
+мини-игру! Твоя задача 
+поймать как можно больше
+монеток с помощью 
+свинки-копилки.
+Помни,что после потери 
+10 монеток,игра остановится.
+           Удачи!"
+
+[node name="ButtonToEvening" type="Button" parent="." unique_id=1614865380]
+offset_left = 566.0
+offset_top = 401.0
+offset_right = 909.0
+offset_bottom = 485.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_u7lkv")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_577yh")
+text = "Начать игру"
+
+[connection signal="pressed" from="ButtonToEvening" to="." method="_on_button_to_evening_pressed"]

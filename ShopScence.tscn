@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://dr3svfx7t8u80"]
+
+[ext_resource type="Texture2D" uid="uid://dahrg5a4qtlaq" path="res://магазин.png" id="1_txnyd"]
+[ext_resource type="Script" uid="uid://jfcr23f1nqxm" path="res://scence/shop_scence.gd" id="2_1uyre"]
+[ext_resource type="Texture2D" uid="uid://3d2wq6r4hcqu" path="res://веселая девочка.png" id="2_tep23"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="3_1uyre"]
+[ext_resource type="Texture2D" uid="uid://cojn4plu1fo5k" path="res://торттик.png" id="4_jyec5"]
+[ext_resource type="Texture2D" uid="uid://dwmidcpqacvvw" path="res://деньги.png" id="5_1uyre"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="5_70fqg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyec5"]
+bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9882353, 0.52156866, 0.6117647, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 14
+expand_margin_left = 30.0
+expand_margin_top = 20.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70fqg"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j71uq"]
+bg_color = Color(0.89558446, 0.16479081, 0.7327512, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1wus"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txnyd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfm5k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1uyre"]
+bg_color = Color(0.81178766, 0.72538966, 0.9138015, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8254967, 0.46934992, 0.9902491, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[node name="Магазин" type="Sprite2D" unique_id=1185403590]
+position = Vector2(572.49994, 322)
+scale = Vector2(0.83648247, 0.8385416)
+texture = ExtResource("1_txnyd")
+script = ExtResource("2_1uyre")
+
+[node name="ВеселаяДевочка" type="Sprite2D" parent="." unique_id=118398925]
+position = Vector2(-228.9348, 53.664608)
+scale = Vector2(0.83301425, 0.77887535)
+texture = ExtResource("2_tep23")
+
+[node name="Ui" type="CanvasLayer" parent="ВеселаяДевочка" unique_id=1785941303]
+
+[node name="Panel" type="Panel" parent="ВеселаяДевочка/Ui" unique_id=302721496]
+offset_left = 823.0
+offset_top = 484.0
+offset_right = 1142.0
+offset_bottom = 636.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jyec5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ВеселаяДевочка/Ui/Panel" unique_id=965048399]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer" unique_id=596969691]
+layout_mode = 2
+
+[node name="LabelMoney" type="Label" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer/HBoxContainer" unique_id=1972160885]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_70fqg")
+text = "3000 РУБ
+"
+
+[node name="TextureRect" type="TextureRect" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer/HBoxContainer" unique_id=226442223]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.85
+texture = ExtResource("5_1uyre")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer" unique_id=695010874]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=1027461908]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_70fqg")
+text = "
+ЭНЕРГИЯ
+"
+
+[node name="ProgressBarEnergy" type="ProgressBar" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=1079952769]
+modulate = Color(0, 0.83192545, 0.44328564, 1)
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+value = 60.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer" unique_id=1639224414]
+layout_mode = 2
+
+[node name="LabelHapiness" type="Label" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=1067306858]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_70fqg")
+text = "СЧАСТЬЕ"
+
+[node name="ProgressBarHappiness" type="ProgressBar" parent="ВеселаяДевочка/Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=102813849]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/background = SubResource("StyleBoxFlat_70fqg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_j71uq")
+value = 60.0
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=853902329]
+position = Vector2(230.1304, -93.01863)
+scale = Vector2(0.7581548, 0.775935)
+texture = ExtResource("3_1uyre")
+
+[node name="Торттик" type="Sprite2D" parent="." unique_id=1011143792]
+position = Vector2(239.69427, -144.29814)
+scale = Vector2(0.43841836, 0.32696465)
+texture = ExtResource("4_jyec5")
+
+[node name="Cake" type="Button" parent="Торттик" unique_id=1243628734]
+offset_left = -313.5829
+offset_top = -379.32193
+offset_right = 321.76318
+offset_bottom = 364.7325
+theme_override_styles/normal = SubResource("StyleBoxFlat_r1wus")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_txnyd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bfm5k")
+
+[node name="Label" type="Label" parent="." unique_id=1631194893]
+offset_left = 26.898424
+offset_top = -15.503106
+offset_right = 488.89844
+offset_bottom = 31.496895
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_70fqg")
+theme_override_font_sizes/font_size = 22
+text = "Чтобы купить тортик, 
+нажмите на него"
+
+[node name="ButtonGoEvening" type="Button" parent="." unique_id=1270979874]
+offset_left = -677.24066
+offset_top = -378.0373
+offset_right = -344.89658
+offset_bottom = -277.86337
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_70fqg")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_1uyre")
+text = "Перейти к вечеру"
+
+[connection signal="pressed" from="Торттик/Cake" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Торттик/Cake" to="." method="_on_cake_pressed"]
+[connection signal="pressed" from="ButtonGoEvening" to="." method="_on_button_go_evening_pressed"]
