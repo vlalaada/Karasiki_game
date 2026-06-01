@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://crb1q8un3otfg"]
+
+[ext_resource type="Script" uid="uid://l5bk70utrc3j" path="res://scence/переход_2.gd" id="1_8yjd2"]
+[ext_resource type="Texture2D" uid="uid://chf3eqqut0q32" path="res://папа магаз.png" id="1_rks37"]
+[ext_resource type="Texture2D" uid="uid://ytg4chdvn6u8" path="res://счаст.png" id="2_to6bd"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="3_8yjd2"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="5_ol6si"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a67kq"]
+bg_color = Color(0.9655903, 0.7722691, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7694622, 0.42408213, 0.9295625, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D" unique_id=863820067]
+script = ExtResource("1_8yjd2")
+
+[node name="ПапаМагаз" type="Sprite2D" parent="." unique_id=417557186]
+position = Vector2(609, 316)
+scale = Vector2(0.8575995, 0.8352865)
+texture = ExtResource("1_rks37")
+
+[node name="Счаст" type="Sprite2D" parent="." unique_id=789292813]
+position = Vector2(939, 347)
+scale = Vector2(0.8521739, 0.80452126)
+texture = ExtResource("2_to6bd")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=638719003]
+position = Vector2(526.00006, 318.00003)
+scale = Vector2(0.54655796, 0.5663231)
+texture = ExtResource("3_8yjd2")
+
+[node name="Label" type="Label" parent="." unique_id=1405757327]
+offset_left = 353.0
+offset_top = 240.0
+offset_right = 1089.0
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ol6si")
+theme_override_font_sizes/font_size = 20
+text = "Папа отправил тебя
+в магазин и дал
+350 рублей!
+Твоя задача 
+купить продукты
+по спику.
+	      Удачи!"
+
+[node name="ButtonToEvening" type="Button" parent="." unique_id=1671201654]
+offset_left = 333.0
+offset_top = 479.0
+offset_right = 733.0
+offset_bottom = 563.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ol6si")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_a67kq")
+text = "Зайти в магазин"
+
+[connection signal="pressed" from="ButtonToEvening" to="." method="_on_button_to_evening_pressed"]

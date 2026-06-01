@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://4minrkkn512i"]
+
+[ext_resource type="Texture2D" uid="uid://bwuuvqk6tnp7b" path="res://комната стол.png" id="1_3v6q5"]
+[ext_resource type="Script" uid="uid://c2nftyw1v0ayj" path="res://scence/переход_3.gd" id="1_xdomh"]
+[ext_resource type="Texture2D" uid="uid://ytg4chdvn6u8" path="res://счаст.png" id="2_xdomh"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="3_gmqcc"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="4_cj1v8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pesb"]
+bg_color = Color(0.9655903, 0.7722691, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7694622, 0.42408213, 0.9295625, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D" unique_id=1311765357]
+script = ExtResource("1_xdomh")
+
+[node name="КомнатаСтол" type="Sprite2D" parent="." unique_id=457853501]
+position = Vector2(616.25, 327.5)
+scale = Vector2(0.89528984, 0.8710107)
+texture = ExtResource("1_3v6q5")
+
+[node name="Счаст" type="Sprite2D" parent="." unique_id=1120014014]
+position = Vector2(939, 360)
+scale = Vector2(0.8398551, 0.79920214)
+texture = ExtResource("2_xdomh")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=1917632276]
+position = Vector2(535, 200)
+scale = Vector2(0.6108696, 0.65957445)
+texture = ExtResource("3_gmqcc")
+
+[node name="Label" type="Label" parent="." unique_id=1529261625]
+offset_left = 331.0
+offset_top = 125.0
+offset_right = 1819.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_cj1v8")
+theme_override_font_sizes/font_size = 21
+text = "У твоей учительницы
+День Рождения! Твоя
+задача собрать ровно
+200 рублей в конверт 
+на подарок.
+      Удачи!"
+
+[node name="ButtonToEvening" type="Button" parent="." unique_id=1129914145]
+offset_left = 346.0
+offset_top = 399.0
+offset_right = 746.0
+offset_bottom = 483.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_cj1v8")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_2pesb")
+text = "Начать"
+
+[connection signal="pressed" from="ButtonToEvening" to="." method="_on_button_to_evening_pressed"]
