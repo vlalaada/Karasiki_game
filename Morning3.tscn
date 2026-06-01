@@ -1,10 +1,240 @@
 [gd_scene format=3 uid="uid://cotquykodh1xi"]
 
 [ext_resource type="Texture2D" uid="uid://70pgmpdds4v1" path="res://утро2.png" id="1_2mjmr"]
+[ext_resource type="Script" uid="uid://bxnf8snugjbc8" path="res://scence/morning_3.gd" id="1_7y3dl"]
+[ext_resource type="Texture2D" uid="uid://3d2wq6r4hcqu" path="res://веселая девочка.png" id="2_q8se4"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="3_ywbq4"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="4_lthba"]
+[ext_resource type="Texture2D" uid="uid://51tearf3iig3" path="res://окно для выбора длинное .png" id="5_so6dj"]
+[ext_resource type="Texture2D" uid="uid://dwmidcpqacvvw" path="res://деньги.png" id="7_rjb88"]
+[ext_resource type="Texture2D" uid="uid://cxj802idlqc47" path="res://подарок.png" id="8_fojyn"]
+[ext_resource type="Texture2D" uid="uid://ja7dv658bewn" path="res://смайлик.png" id="9_vpdmi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdg0b"]
+bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9882353, 0.52156866, 0.6117647, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 14
+expand_margin_left = 30.0
+expand_margin_top = 20.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1aub5"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxra1"]
+bg_color = Color(0.89558446, 0.16479081, 0.7327512, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svstv"]
+bg_color = Color(0.91301095, 0.65000254, 0.7216747, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.93102473, 0, 0.4354593, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23mpd"]
+bg_color = Color(0.9655903, 0.7722691, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7694622, 0.42408213, 0.9295625, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Node2D" type="Node2D" unique_id=1437084643]
+script = ExtResource("1_7y3dl")
 
 [node name="Утро2" type="Sprite2D" parent="." unique_id=550997276]
-position = Vector2(576.75, 322.5)
-scale = Vector2(0.8142755, 0.83984375)
+position = Vector2(572.49994, 322.5)
+scale = Vector2(0.8203125, 0.83984375)
 texture = ExtResource("1_2mjmr")
+
+[node name="ВеселаяДевочка" type="Sprite2D" parent="." unique_id=1488191509]
+position = Vector2(279, 381)
+scale = Vector2(0.741395, 0.6712101)
+texture = ExtResource("2_q8se4")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=1014483602]
+position = Vector2(676, 295)
+scale = Vector2(0.6605525, 0.6650598)
+texture = ExtResource("3_ywbq4")
+
+[node name="utro" type="Sprite2D" parent="." unique_id=1598692723]
+position = Vector2(130, 83)
+scale = Vector2(0.27627409, 0.2595532)
+texture = ExtResource("3_ywbq4")
+
+[node name="utro1" type="Label" parent="utro" unique_id=600179339]
+offset_left = -292.4608
+offset_top = -103.665955
+offset_right = 319.5392
+offset_bottom = 103.334045
+theme_override_colors/font_color = Color(0.9023653, 0.21185705, 0.50084645, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+theme_override_font_sizes/font_size = 102
+text = "ДЕНЬ 3
+УТРО"
+
+[node name="ОкноДляВыбораДлинное" type="Sprite2D" parent="." unique_id=1861757594]
+position = Vector2(664, 57)
+scale = Vector2(0.47554347, 0.23670213)
+texture = ExtResource("5_so6dj")
+
+[node name="Label" type="Label" parent="." unique_id=1355180407]
+offset_left = 275.0
+offset_top = 38.0
+offset_right = 1075.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+theme_override_font_sizes/font_size = 18
+text = "Сегодня в школе идёт сбор денег 
+на подарок учителю"
+horizontal_alignment = 1
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=1792307549]
+
+[node name="Panel" type="Panel" parent="Ui" unique_id=634343474]
+offset_left = 847.0
+offset_top = 479.0
+offset_right = 1139.0
+offset_bottom = 633.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rdg0b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ui/Panel" unique_id=133238359]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1056212740]
+layout_mode = 2
+
+[node name="LabelMoney" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=2134457029]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+text = "3000 РУБ
+"
+
+[node name="TextureRect" type="TextureRect" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=1267139705]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.85
+texture = ExtResource("7_rjb88")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1519303070]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=1633585004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+text = "
+ЭНЕРГИЯ
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=733900591]
+modulate = Color(0, 0.83192545, 0.44328564, 1)
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+value = 60.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1541635407]
+layout_mode = 2
+
+[node name="LabelHappiness" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=2070703920]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+text = "СЧАСТЬЕ"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=1694275619]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/background = SubResource("StyleBoxFlat_1aub5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yxra1")
+value = 60.0
+
+[node name="Подарок" type="Sprite2D" parent="." unique_id=250174251]
+position = Vector2(558.00006, 221)
+scale = Vector2(0.44571647, 0.40582657)
+texture = ExtResource("8_fojyn")
+
+[node name="GiftButton" type="Button" parent="Подарок" unique_id=1853791406]
+offset_left = -210.89658
+offset_top = 162.63104
+offset_right = 244.5499
+offset_bottom = 441.07513
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_svstv")
+text = "Сдать
+деньги
+-200 руб
++10🤩
+"
+
+[node name="Смайлик" type="Sprite2D" parent="." unique_id=2005017647]
+position = Vector2(791.99994, 224.99997)
+scale = Vector2(0.44497785, 0.38143632)
+texture = ExtResource("9_vpdmi")
+
+[node name="SmileButton" type="Button" parent="Смайлик" unique_id=432800681]
+offset_left = -215.38373
+offset_top = 150.31052
+offset_right = 247.20343
+offset_bottom = 458.79233
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_svstv")
+text = "Сказать,
+что забыл
+
+-5🤩
+"
+
+[node name="ButtonToEvening" type="Button" parent="." unique_id=987123916]
+offset_left = 507.0
+offset_top = 477.0
+offset_right = 779.0
+offset_bottom = 540.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_23mpd")
+text = "Перейти к вечеру"
+
+[connection signal="pressed" from="Подарок/GiftButton" to="." method="_on_gift_button_pressed"]
+[connection signal="pressed" from="Смайлик/SmileButton" to="." method="_on_smile_button_pressed"]
+[connection signal="pressed" from="ButtonToEvening" to="." method="_on_button_to_evening_pressed"]

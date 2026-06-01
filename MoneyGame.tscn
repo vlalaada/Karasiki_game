@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://bsu3n8nca87fo"]
+
+[ext_resource type="Texture2D" uid="uid://coqanda1800yk" path="res://стол.jpeg" id="1_uln2u"]
+[ext_resource type="Script" uid="uid://tqxqxindvitj" path="res://scence/money_game.gd" id="1_vy5uy"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="2_n5aa5"]
+[ext_resource type="Texture2D" uid="uid://dm5pdyx3y3rng" path="res://конверт.png" id="2_svtft"]
+[ext_resource type="Texture2D" uid="uid://68yhrgfrsnb6" path="res://10.png" id="3_mb38x"]
+[ext_resource type="Texture2D" uid="uid://dyi1j5oknt34j" path="res://50.png" id="4_u8guf"]
+[ext_resource type="Texture2D" uid="uid://ca3hpq2ghmhgj" path="res://100.png" id="5_gsna8"]
+[ext_resource type="Script" uid="uid://b68rukaxhgmfb" path="res://scence/area_2d_2.gd" id="6_7bvh0"]
+[ext_resource type="Script" uid="uid://cmamwt17ghhck" path="res://scence/area_2d_3.gd" id="8_hfewk"]
+[ext_resource type="Script" uid="uid://bc0u2yeehga8a" path="res://scence/area_2d_4.gd" id="10_aajpw"]
+[ext_resource type="Script" uid="uid://ia1hd8vq8lxu" path="res://scence/area_2d_5.gd" id="11_dwhp8"]
+[ext_resource type="Script" uid="uid://dcowsgh2maumd" path="res://scence/area_2d_6.gd" id="12_micd5"]
+[ext_resource type="Script" uid="uid://3h2gorganqtg" path="res://scence/area_2d_7.gd" id="13_xuvtr"]
+[ext_resource type="Script" uid="uid://booa41pri64u8" path="res://scence/area_2d_8.gd" id="14_5by0r"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="16_nniom"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nw5a"]
+size = Vector2(190.57344, 101.1644)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4orqk"]
+size = Vector2(250.24527, 160.08386)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj225"]
+bg_color = Color(0.81178766, 0.72538966, 0.9138015, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8254967, 0.46934992, 0.9902491, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uplcq"]
+bg_color = Color(0.81178766, 0.72538966, 0.9138015, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8254967, 0.46934992, 0.9902491, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[node name="Node2D" type="Node2D" unique_id=1412349028]
+script = ExtResource("1_vy5uy")
+
+[node name="Стол" type="Sprite2D" parent="." unique_id=1623951122]
+position = Vector2(572.50006, 323.50003)
+scale = Vector2(0.8316762, 0.8476563)
+texture = ExtResource("1_uln2u")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1417229908]
+z_index = 10
+script = ExtResource("6_7bvh0")
+
+[node name="50" type="Sprite2D" parent="Area2D2" unique_id=1615619393]
+position = Vector2(866.1349, 169.99344)
+rotation = 0.7033677
+scale = Vector2(0.31553358, 0.34220096)
+texture = ExtResource("4_u8guf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1500169178]
+position = Vector2(863.00006, 178.00009)
+rotation = 0.70685834
+shape = SubResource("RectangleShape2D_2nw5a")
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=1322004907]
+z_index = 10
+script = ExtResource("8_hfewk")
+
+[node name="100" type="Sprite2D" parent="Area2D3" unique_id=1845997507]
+position = Vector2(322.23676, 286.0492)
+rotation = -0.43284166
+scale = Vector2(0.32066652, 0.33805764)
+texture = ExtResource("5_gsna8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=51934560]
+position = Vector2(327.0978, 284.29807)
+rotation = -0.3228859
+shape = SubResource("RectangleShape2D_2nw5a")
+
+[node name="Area2D4" type="Area2D" parent="." unique_id=927474525]
+z_index = 10
+script = ExtResource("10_aajpw")
+
+[node name="51" type="Sprite2D" parent="Area2D4" unique_id=669945692]
+position = Vector2(363.125, 150.125)
+scale = Vector2(0.3511817, 0.38414636)
+texture = ExtResource("4_u8guf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=1279829025]
+position = Vector2(376.8862, 140.31226)
+rotation = 0.0017453292
+scale = Vector2(0.99999994, 1)
+shape = SubResource("RectangleShape2D_2nw5a")
+
+[node name="Area2D5" type="Area2D" parent="." unique_id=982649929]
+z_index = 10
+script = ExtResource("11_dwhp8")
+
+[node name="11" type="Sprite2D" parent="Area2D5" unique_id=164297618]
+position = Vector2(313, 432.9999)
+rotation = -0.27052605
+scale = Vector2(0.29261008, 0.33045042)
+texture = ExtResource("3_mb38x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5" unique_id=1157529593]
+position = Vector2(315.34955, 437.55606)
+rotation = -0.3228859
+shape = SubResource("RectangleShape2D_2nw5a")
+
+[node name="Area2D6" type="Area2D" parent="." unique_id=1829819808]
+z_index = 10
+script = ExtResource("12_micd5")
+
+[node name="12" type="Sprite2D" parent="Area2D6" unique_id=127644921]
+position = Vector2(755.0215, 302.25537)
+rotation = 0.27052605
+scale = Vector2(0.29227933, 0.30898753)
+texture = ExtResource("3_mb38x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6" unique_id=1479320709]
+position = Vector2(763, 311.99997)
+rotation = 0.32637656
+scale = Vector2(0.99999994, 1)
+shape = SubResource("RectangleShape2D_2nw5a")
+
+[node name="Area2D7" type="Area2D" parent="." unique_id=1057151770]
+z_index = 10
+script = ExtResource("13_xuvtr")
+
+[node name="13" type="Sprite2D" parent="Area2D7" unique_id=1492804738]
+position = Vector2(519.99994, 328.99997)
+rotation = -0.78365284
+scale = Vector2(0.23847519, 0.30473343)
+texture = ExtResource("3_mb38x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7" unique_id=546482925]
+position = Vector2(515, 333.00006)
+rotation = -0.7784169
+shape = SubResource("RectangleShape2D_2nw5a")
+
+[node name="Area2D8" type="Area2D" parent="." unique_id=1214473626]
+z_index = 10
+script = ExtResource("14_5by0r")
+
+[node name="14" type="Sprite2D" parent="Area2D8" unique_id=464502160]
+position = Vector2(646.99994, 446.99994)
+rotation = 0.61959183
+scale = Vector2(0.23239812, 0.36701307)
+texture = ExtResource("3_mb38x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8" unique_id=1662942999]
+position = Vector2(642.0245, 452.39835)
+rotation = 0.6265732
+shape = SubResource("RectangleShape2D_2nw5a")
+
+[node name="Area2D9" type="Area2D" parent="." unique_id=1316864536]
+
+[node name="Конверт" type="Sprite2D" parent="Area2D9" unique_id=1790566594]
+position = Vector2(908, 455.00006)
+rotation = -0.14835298
+scale = Vector2(0.80982286, 0.8157182)
+texture = ExtResource("2_svtft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9" unique_id=1225124096]
+position = Vector2(898, 462.99994)
+rotation = -0.27052605
+shape = SubResource("RectangleShape2D_4orqk")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=1702806444]
+position = Vector2(195.99997, 35.875)
+scale = Vector2(0.49275362, 0.15458778)
+texture = ExtResource("16_nniom")
+
+[node name="Label" type="Label" parent="." unique_id=193975390]
+offset_left = 33.0
+offset_top = 22.0
+offset_right = 153.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_n5aa5")
+theme_override_font_sizes/font_size = 20
+text = "Сумма:"
+
+[node name="Area2D10" type="Area2D" parent="." unique_id=383539611]
+z_index = 10
+script = ExtResource("12_micd5")
+
+[node name="12" type="Sprite2D" parent="Area2D10" unique_id=1632807368]
+position = Vector2(645, 140)
+rotation = 0.27052605
+scale = Vector2(0.27864468, 0.30818373)
+texture = ExtResource("3_mb38x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D10" unique_id=1665502811]
+position = Vector2(642, 146)
+rotation = 0.32637656
+shape = SubResource("RectangleShape2D_2nw5a")
+
+[node name="ButtonEvening" type="Button" parent="." unique_id=1994145740]
+process_mode = 3
+visible = false
+offset_left = 726.0
+offset_top = 534.0
+offset_right = 1142.0
+offset_bottom = 634.17395
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_n5aa5")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_uj225")
+text = "Перейти к вечеру"
+
+[node name="ButtonRetry" type="Button" parent="." unique_id=1191151692]
+process_mode = 3
+visible = false
+offset_left = 715.0
+offset_top = 526.0
+offset_right = 1131.0
+offset_bottom = 626.17395
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_n5aa5")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_uplcq")
+text = "Попробовать 
+снова"
+
+[connection signal="area_entered" from="Area2D9" to="." method="_on_area_2d_9_area_entered"]
+[connection signal="pressed" from="ButtonEvening" to="." method="_on_button_evening_pressed"]
+[connection signal="pressed" from="ButtonRetry" to="." method="_on_button_retry_pressed"]

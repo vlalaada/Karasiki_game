@@ -232,12 +232,13 @@ theme_override_fonts/font = ExtResource("3_0fcng")
 theme_override_font_sizes/font_size = 25
 text = "Сделай свой выбор"
 
-[node name="NextDayButton" type="Button" parent="." unique_id=1693700518]
+[node name="NextDayButton" type="Button" parent="Label2" unique_id=1693700518]
 visible = false
-offset_left = 443.0
-offset_top = 561.0
-offset_right = 674.0
-offset_bottom = 614.0
+layout_mode = 0
+offset_left = 71.0
+offset_top = 544.0
+offset_right = 302.0
+offset_bottom = 597.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_0fcng")
 theme_override_font_sizes/font_size = 25
@@ -246,4 +247,4 @@ text = "Далее"
 
 [connection signal="pressed" from="Качель/WalkButton" to="." method="_on_walk_button_pressed"]
 [connection signal="pressed" from="Папа/HelpDadButton" to="." method="_on_help_dad_button_pressed"]
-[connection signal="pressed" from="NextDayButton" to="." method="_on_next_day_button_pressed"]
+[connection signal="pressed" from="Label2/NextDayButton" to="." method="_on_next_day_button_pressed"]

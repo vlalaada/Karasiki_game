@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://boy47xy313juh"]
+
+[ext_resource type="Script" uid="uid://b35es1i38o2v3" path="res://node_2d.gd" id="1_j47yv"]
+[ext_resource type="Texture2D" uid="uid://btuxayux6o2u2" path="res://мм.jpeg" id="2_l36om"]
+[ext_resource type="PackedScene" uid="uid://c4lxqhfvbx5in" path="res://scence/item.tscn" id="3_f65kr"]
+[ext_resource type="Texture2D" uid="uid://bxo0wu6uxhgkq" path="res://копилка.png" id="4_k3wf3"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="6_l36om"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l36om"]
+size = Vector2(708.297, 351.43478)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukrrt"]
+bg_color = Color(0.9655903, 0.7722691, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7694622, 0.42408213, 0.9295625, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D" unique_id=1124025173]
+script = ExtResource("1_j47yv")
+
+[node name="Мм" type="Sprite2D" parent="." unique_id=505041231]
+position = Vector2(577.5, 328)
+scale = Vector2(0.8146307, 0.83854157)
+texture = ExtResource("2_l36om")
+
+[node name="PiggyBank" type="Area2D" parent="." unique_id=1374733367]
+position = Vector2(577.5, 328)
+scale = Vector2(0.8146307, 0.83854157)
+
+[node name="Sprite2D" type="Sprite2D" parent="PiggyBank" unique_id=583014170]
+position = Vector2(16.571915, 205.11801)
+scale = Vector2(0.62802964, 0.58884305)
+texture = ExtResource("4_k3wf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PiggyBank" unique_id=723687280]
+position = Vector2(-9.206636, 212.27332)
+scale = Vector2(0.9999991, 1)
+shape = SubResource("RectangleShape2D_l36om")
+
+[node name="Item" parent="." unique_id=1447917602 instance=ExtResource("3_f65kr")]
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=745502623]
+autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=1879067833]
+offset_left = 510.0
+offset_top = 136.0
+offset_right = 796.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_l36om")
+theme_override_font_sizes/font_size = 26
+text = "Поймано:0
+Пропущено:0"
+
+[node name="GoToEveningButton" type="Button" parent="." unique_id=1843058854]
+offset_left = 848.0
+offset_top = 454.0
+offset_right = 1144.0
+offset_bottom = 548.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_l36om")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ukrrt")
+text = "Перейти к вечеру"
+
+[node name="RetryButton" type="Button" parent="." unique_id=2089226595]
+offset_left = 850.0
+offset_top = 565.0
+offset_right = 1145.0
+offset_bottom = 643.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_l36om")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ukrrt")
+text = "Попробовать снова"
+
+[connection signal="area_entered" from="PiggyBank" to="." method="_on_piggy_bank_area_entered"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="GoToEveningButton" to="." method="_on_go_to_evening_button_pressed"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]

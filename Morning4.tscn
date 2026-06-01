@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://vhojeb5b5qsx"]
+
+[ext_resource type="Script" uid="uid://dp1611feuxfnd" path="res://scence/morning_4.gd" id="1_55mne"]
+[ext_resource type="Texture2D" uid="uid://cruoipmvby2d6" path="res://улица.png" id="1_h31uo"]
+[ext_resource type="Texture2D" uid="uid://3d2wq6r4hcqu" path="res://веселая девочка.png" id="2_55mne"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="3_biddw"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="4_jkpi4"]
+[ext_resource type="Texture2D" uid="uid://51tearf3iig3" path="res://окно для выбора длинное .png" id="5_bossc"]
+[ext_resource type="Texture2D" uid="uid://dwmidcpqacvvw" path="res://деньги.png" id="6_mgyeo"]
+[ext_resource type="Texture2D" uid="uid://btdpwhpj23xf6" path="res://колесо.png" id="7_eb0r8"]
+[ext_resource type="Texture2D" uid="uid://bm7g0lrvvkaem" path="res://купюра.png" id="8_lymb3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ija8v"]
+bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9882353, 0.52156866, 0.6117647, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 14
+expand_margin_left = 30.0
+expand_margin_top = 20.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j45st"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a55dw"]
+bg_color = Color(0.89558446, 0.16479081, 0.7327512, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7r24"]
+bg_color = Color(0.91301095, 0.65000254, 0.7216747, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.93102473, 0, 0.4354593, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2th07"]
+bg_color = Color(0.9655903, 0.7722691, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7694622, 0.42408213, 0.9295625, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D" unique_id=494395202]
+script = ExtResource("1_55mne")
+
+[node name="Улица" type="Sprite2D" parent="." unique_id=1124033811]
+position = Vector2(628.5, 324.00003)
+scale = Vector2(0.8941762, 0.84114593)
+texture = ExtResource("1_h31uo")
+
+[node name="ВеселаяДевочка" type="Sprite2D" parent="." unique_id=20465933]
+position = Vector2(275, 378)
+scale = Vector2(0.741395, 0.6712101)
+texture = ExtResource("2_55mne")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=967389597]
+position = Vector2(636, 283)
+scale = Vector2(0.6020154, 0.67021275)
+texture = ExtResource("3_biddw")
+
+[node name="utro" type="Sprite2D" parent="." unique_id=1243795915]
+position = Vector2(130, 83)
+scale = Vector2(0.27627409, 0.2595532)
+texture = ExtResource("3_biddw")
+
+[node name="utro1" type="Label" parent="utro" unique_id=843596865]
+offset_left = -292.4608
+offset_top = -103.665955
+offset_right = 319.5392
+offset_bottom = 103.334045
+theme_override_colors/font_color = Color(0.9023653, 0.21185705, 0.50084645, 1)
+theme_override_fonts/font = ExtResource("4_jkpi4")
+theme_override_font_sizes/font_size = 102
+text = "ДЕНЬ 4
+УТРО"
+
+[node name="ОкноДляВыбораДлинное" type="Sprite2D" parent="." unique_id=1975930655]
+position = Vector2(664, 52.5)
+scale = Vector2(0.47554347, 0.22473405)
+texture = ExtResource("5_bossc")
+
+[node name="Label" type="Label" parent="." unique_id=1486405446]
+offset_left = 284.0
+offset_top = 31.0
+offset_right = 1084.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jkpi4")
+theme_override_font_sizes/font_size = 18
+text = "Сегодня в гости приехала
+бабушка"
+horizontal_alignment = 1
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=1329652373]
+
+[node name="Panel" type="Panel" parent="Ui" unique_id=1217609336]
+offset_left = 847.0
+offset_top = 479.0
+offset_right = 1139.0
+offset_bottom = 633.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ija8v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ui/Panel" unique_id=792341574]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1540637468]
+layout_mode = 2
+
+[node name="LabelMoney" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=809603325]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jkpi4")
+text = "3000 РУБ
+"
+
+[node name="TextureRect" type="TextureRect" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=995715164]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.85
+texture = ExtResource("6_mgyeo")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1036596703]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=95525596]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jkpi4")
+text = "
+ЭНЕРГИЯ
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=827135652]
+modulate = Color(0, 0.83192545, 0.44328564, 1)
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+value = 60.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1200197385]
+layout_mode = 2
+
+[node name="LabelHappiness" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=1857104617]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jkpi4")
+text = "СЧАСТЬЕ"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=1423677072]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/background = SubResource("StyleBoxFlat_j45st")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a55dw")
+value = 60.0
+
+[node name="Колесо" type="Sprite2D" parent="." unique_id=1990967708]
+position = Vector2(741, 201)
+scale = Vector2(0.39730883, 0.35190216)
+texture = ExtResource("7_eb0r8")
+
+[node name="GiftButton2" type="Button" parent="Колесо" unique_id=1843124535]
+offset_left = -224.00703
+offset_top = 227.33586
+offset_right = 223.99297
+offset_bottom = 574.0232
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jkpi4")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7r24")
+text = "Пойти
+в парк
++300 руб
++10🤩
++15⚡
+"
+
+[node name="Купюра" type="Sprite2D" parent="." unique_id=1478444313]
+position = Vector2(536, 208.00002)
+scale = Vector2(0.26052445, 0.3397695)
+texture = ExtResource("8_lymb3")
+
+[node name="GiftButton" type="Button" parent="Купюра" unique_id=959043139]
+offset_left = -326.26498
+offset_top = 220.73785
+offset_right = 337.73502
+offset_bottom = 562.14575
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jkpi4")
+theme_override_font_sizes/font_size = 69
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7r24")
+text = "Получить
+подарок
++500 руб
+"
+
+[node name="ButtonToEvening" type="Button" parent="." unique_id=1389367862]
+offset_left = 487.0
+offset_top = 466.0
+offset_right = 759.0
+offset_bottom = 529.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jkpi4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2th07")
+text = "Перейти к вечеру"
+
+[connection signal="pressed" from="Колесо/GiftButton2" to="." method="_on_gift_button_2_pressed"]
+[connection signal="pressed" from="Купюра/GiftButton" to="." method="_on_gift_button_pressed"]

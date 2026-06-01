@@ -117,6 +117,7 @@ corner_radius_bottom_left = 10
 
 [node name="Node2D" type="Node2D" unique_id=2114330417]
 script = ExtResource("1_1x54b")
+metadata/_edit_vertical_guides_ = [-445.0]
 
 [node name="ФонКомната" type="Sprite2D" parent="." unique_id=1130051755]
 position = Vector2(579, 331)

@@ -2,8 +2,8 @@ extends Node2D
 
 func _ready():
 	
-	$AnimatedSprite2D.play("idle")
-	$AnimatedSprite2D2.play("cat")
+	$AnimatedSprite2D.play("cat")
+	$AnimatedSprite2D2.play("idle")
 	
 	
 	update_ui()
@@ -16,4 +16,4 @@ func update_ui():
 
 # 
 func _on_button_to_next_pressed():
-	get_tree().change_scene_to_file("res://scence/Morning2.tscn")
+	get_tree().change_scene_to_file("res://scence/Morning4.tscn")

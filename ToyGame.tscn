@@ -43,7 +43,6 @@ position = Vector2(491, 522)
 shape = SubResource("RectangleShape2D_vxqp6")
 
 [node name="Spawner" type="Timer" parent="." unique_id=1888496195]
-wait_time = 0.001
 autostart = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=248546926]

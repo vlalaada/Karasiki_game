@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://b02rb13nl3o11"]
+
+[ext_resource type="Script" uid="uid://cox6x28ash08k" path="res://scence/garden_game.gd" id="1_igtpo"]
+[ext_resource type="Texture2D" uid="uid://b0jhc5f1410j" path="res://фон гр.png" id="1_knvcl"]
+[ext_resource type="Texture2D" uid="uid://u7612yjbp13h" path="res://грядка.png" id="2_igtpo"]
+[ext_resource type="Texture2D" uid="uid://ddl6ck5upjpaj" path="res://семена.png" id="3_76m41"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="4_5dlsm"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="5_6ji5u"]
+[ext_resource type="Texture2D" uid="uid://d3hkj6r15jx5f" path="res://морк.png" id="6_yvys8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h5fe"]
+bg_color = Color(0.8646759, 0.46913928, 0.444967, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7778729, 0.39732322, 0, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_igtpo"]
+radius = 47.0
+height = 232.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igtpo"]
+bg_color = Color(0.58799785, 0.5877642, 0.7552259, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.711337, 0.4756204, 0.9999973, 1)
+
+[node name="Node2D" type="Node2D" unique_id=700905522]
+script = ExtResource("1_igtpo")
+
+[node name="ФонГр" type="Sprite2D" parent="." unique_id=1015786128]
+position = Vector2(615.625, 323.00003)
+scale = Vector2(0.8844106, 0.8528646)
+texture = ExtResource("1_knvcl")
+
+[node name="Грядка" type="Sprite2D" parent="." unique_id=795464022]
+position = Vector2(615, 312.81253)
+scale = Vector2(1.8079764, 1.7842143)
+texture = ExtResource("2_igtpo")
+
+[node name="Семена" type="Sprite2D" parent="." unique_id=912929880]
+position = Vector2(429, 504.00003)
+scale = Vector2(1.8884298, 1.6239669)
+texture = ExtResource("3_76m41")
+
+[node name="Семена2" type="Sprite2D" parent="." unique_id=1757306967]
+position = Vector2(598.0002, 293)
+scale = Vector2(1.5, 1.2272727)
+texture = ExtResource("3_76m41")
+
+[node name="Семена4" type="Sprite2D" parent="." unique_id=312200006]
+position = Vector2(775.00006, 467.00003)
+scale = Vector2(1.9028925, 1.6384296)
+texture = ExtResource("3_76m41")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=6344693]
+
+[node name="BueButton" type="Button" parent="CanvasLayer" unique_id=2052324991]
+offset_left = 767.0
+offset_top = 17.0
+offset_right = 1147.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("4_5dlsm")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_8h5fe")
+text = "Купить семена
+100 рублей"
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="CanvasLayer" unique_id=110509678]
+position = Vector2(205, 74)
+scale = Vector2(0.45144928, 0.18882976)
+texture = ExtResource("5_6ji5u")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1412202624]
+offset_left = 54.0
+offset_top = 56.0
+offset_right = 537.0
+offset_bottom = 217.56255
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5dlsm")
+theme_override_font_sizes/font_size = 29
+text = "Деньги:200"
+
+[node name="WaterButton" type="Button" parent="CanvasLayer" unique_id=1314746274]
+visible = false
+offset_left = 765.0
+offset_top = 23.0
+offset_right = 1145.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("4_5dlsm")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_8h5fe")
+text = "Полить 
+растения"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=365288549]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=29506387]
+position = Vector2(442, 465)
+shape = SubResource("CapsuleShape2D_igtpo")
+
+[node name="Морк" type="Sprite2D" parent="Area2D" unique_id=1877755553]
+position = Vector2(439, 489)
+texture = ExtResource("6_yvys8")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=129741352]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1685069735]
+position = Vector2(791, 430)
+shape = SubResource("CapsuleShape2D_igtpo")
+
+[node name="Морк2" type="Sprite2D" parent="Area2D2" unique_id=2029121700]
+position = Vector2(782, 451)
+texture = ExtResource("6_yvys8")
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=45411022]
+position = Vector2(4, 21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1076894797]
+position = Vector2(631, 374)
+shape = SubResource("CapsuleShape2D_igtpo")
+
+[node name="Морк4" type="Sprite2D" parent="Area2D3" unique_id=1686770542]
+position = Vector2(628.0001, 392)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("6_yvys8")
+
+[node name="Area2D4" type="Area2D" parent="." unique_id=175991756]
+position = Vector2(-8, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=1872725551]
+position = Vector2(533, 243)
+shape = SubResource("CapsuleShape2D_igtpo")
+
+[node name="Морк3" type="Sprite2D" parent="Area2D4" unique_id=1418597773]
+position = Vector2(543.00006, 265)
+scale = Vector2(0.9416544, 0.91463417)
+texture = ExtResource("6_yvys8")
+
+[node name="ButtonToNext" type="Button" parent="." unique_id=1928943497]
+visible = false
+offset_left = 800.0
+offset_top = 509.0
+offset_right = 1149.0
+offset_bottom = 604.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5dlsm")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_igtpo")
+text = "Далее"
+
+[connection signal="pressed" from="CanvasLayer/BueButton" to="." method="_on_bue_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/WaterButton" to="." method="_on_water_button_pressed"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Area2D2" to="." method="_on_area_2d_2_input_event"]
+[connection signal="input_event" from="Area2D3" to="." method="_on_area_2d_3_input_event"]
+[connection signal="input_event" from="Area2D4" to="." method="_on_area_2d_4_input_event"]
+[connection signal="pressed" from="ButtonToNext" to="." method="_on_button_to_next_pressed"]

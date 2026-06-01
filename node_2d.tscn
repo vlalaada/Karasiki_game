@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c48l1qkr3buxg"]
+
+[ext_resource type="Texture2D" uid="uid://cso1b1fwscw46" path="res://фон двор.jpg" id="1_gikdm"]
+
+[node name="Node2D" type="Node2D" unique_id=149739624]
+
+[node name="ФонДвор" type="Sprite2D" parent="." unique_id=750747151]
+position = Vector2(577.5, 321.49997)
+scale = Vector2(0.82826084, 0.8763297)
+texture = ExtResource("1_gikdm")

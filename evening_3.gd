@@ -11,26 +11,25 @@ func update_ui():
 	$Ui/Panel/VBoxContainer/HBoxContainer3/ProgressBar.value = GameState.happiness
 
 func lock_choices():
-	$"Учебники/HomeworkButton".disabled = true
-	$"Подушка/SleepoverButton".disabled = true
+	$"Бабка/GrandmaButton".disabled = true
+	$"Мультики/CartoonsButton".disabled = true
 
 
-func _on_sleepover_button_pressed():
+func _on_cartoons_button_pressed():
 	lock_choices()
-	GameState.update_stats(-200,+20,+15)
+	GameState.update_stats(0, +15, +20)
 	update_ui()
 	
 	$ButtonToNext.visible = true
 
 
-func _on_homework_button_pressed():
+func _on_grandma_button_pressed():
 	lock_choices()
-	GameState.update_stats(+400, -5, -5)
+	GameState.update_stats(700, -15, +5)
 	update_ui()
 	
-	
-	get_tree().change_scene_to_file("res://scence/Переход5.tscn")
+	get_tree().change_scene_to_file("res://scence/Переход4.tscn")
 
 
 func _on_button_to_next_pressed():
-	get_tree().change_scene_to_file("res://scence/NextDay2.tscn")
+	get_tree().change_scene_to_file("res://scence/NextDay3.tscn")

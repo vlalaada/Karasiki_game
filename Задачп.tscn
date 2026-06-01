@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://booe3kdgaajql"]
+
+[ext_resource type="Texture2D" uid="uid://d2rvsitecvumv" path="res://фон стол.png" id="1_do4ah"]
+[ext_resource type="Script" uid="uid://swfw8erd26nc" path="res://scence/задача.gd" id="1_toc63"]
+[ext_resource type="Texture2D" uid="uid://dilc80ja4cqk6" path="res://торт.png" id="2_05wno"]
+[ext_resource type="Texture2D" uid="uid://g5tav2ymgegg" path="res://пирожок.png" id="3_toc63"]
+[ext_resource type="Texture2D" uid="uid://crv2fbbprex03" path="res://яблоко.png" id="4_2iyg0"]
+[ext_resource type="FontFile" uid="uid://c2hshch2aq8hj" path="res://ofont.ru_Buira.ttf" id="5_1jjrr"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="7_2iyg0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jjrr"]
+bg_color = Color(0.81178766, 0.72538966, 0.9138015, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8254967, 0.46934992, 0.9902491, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecbsb"]
+bg_color = Color(0.81178766, 0.72538966, 0.9138015, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8254967, 0.46934992, 0.9902491, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wenhp"]
+bg_color = Color(0.7432825, 0.59305084, 0.6952072, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8850821, 0.5525792, 0.7992349, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1416579348]
+script = ExtResource("1_toc63")
+
+[node name="ФонСтол" type="Sprite2D" parent="." unique_id=400538473]
+position = Vector2(580.75006, 333)
+scale = Vector2(0.81427556, 0.8307291)
+texture = ExtResource("1_do4ah")
+
+[node name="Торт" type="Sprite2D" parent="." unique_id=136940428]
+position = Vector2(706, 152)
+scale = Vector2(0.52580327, 0.55801153)
+texture = ExtResource("2_05wno")
+
+[node name="Label3" type="Label" parent="Торт" unique_id=133296653]
+offset_left = -119.846344
+offset_top = 173.74753
+offset_right = 141.15366
+offset_bottom = 257.74753
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_1jjrr")
+theme_override_font_sizes/font_size = 83
+text = "100 руб"
+
+[node name="Пирожок" type="Sprite2D" parent="." unique_id=256577105]
+position = Vector2(810.00006, 410.00003)
+scale = Vector2(0.438, 0.424)
+texture = ExtResource("3_toc63")
+
+[node name="Label3" type="Label" parent="Пирожок" unique_id=1781605784]
+anchors_preset = -1
+anchor_left = 0.78200006
+anchor_right = 0.78200006
+offset_left = -530.2695
+offset_top = 179.2453
+offset_right = -193.26949
+offset_bottom = 287.2453
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_1jjrr")
+theme_override_font_sizes/font_size = 107
+text = "40 руб"
+
+[node name="Яблоко" type="Sprite2D" parent="." unique_id=108562681]
+position = Vector2(899, 165)
+scale = Vector2(0.27890626, 0.24247853)
+texture = ExtResource("4_2iyg0")
+
+[node name="Label3" type="Label" parent="Яблоко" unique_id=1552853077]
+offset_left = -224.08966
+offset_top = 402.61298
+offset_right = 242.91034
+offset_bottom = 550.613
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_1jjrr")
+theme_override_font_sizes/font_size = 167
+text = "10 руб"
+
+[node name="Label" type="Label" parent="." unique_id=187626568]
+offset_left = 305.0
+offset_top = 82.0
+offset_right = 466.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_1jjrr")
+theme_override_font_sizes/font_size = 55
+text = "Задача
+"
+
+[node name="Label2" type="Label" parent="." unique_id=1908231112]
+offset_left = 224.0
+offset_top = 151.0
+offset_right = 710.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_1jjrr")
+theme_override_font_sizes/font_size = 34
+text = "У Кати было 300 рублей
+Она купила 2 пирожка
+1 торт и 2 яблоко
+Сколько денег у неё 
+осталось?"
+
+[node name="MoneyInput" type="LineEdit" parent="." unique_id=1743723584]
+offset_left = 252.0
+offset_top = 372.0
+offset_right = 525.0
+offset_bottom = 413.0
+
+[node name="ButtonEvening" type="Button" parent="." unique_id=1728552036]
+process_mode = 3
+visible = false
+offset_left = 924.0
+offset_top = 540.0
+offset_right = 1143.0
+offset_bottom = 640.17395
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_2iyg0")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_1jjrr")
+text = "Далее"
+
+[node name="ButtonRetry" type="Button" parent="." unique_id=319911900]
+process_mode = 3
+visible = false
+offset_left = 727.0
+offset_top = 536.0
+offset_right = 1143.0
+offset_bottom = 636.17395
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_2iyg0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_ecbsb")
+text = "Попробовать 
+снова"
+
+[node name="CheckButton" type="Button" parent="." unique_id=1137701149]
+offset_left = 290.0
+offset_top = 427.0
+offset_right = 465.0
+offset_bottom = 489.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_2iyg0")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_wenhp")
+text = "Проверить"
+
+[connection signal="pressed" from="ButtonEvening" to="." method="_on_button_evening_pressed"]
+[connection signal="pressed" from="ButtonRetry" to="." method="_on_button_retry_pressed"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]

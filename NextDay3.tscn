@@ -1,0 +1,280 @@
+[gd_scene format=3 uid="uid://ce2wd8pe3b2ob"]
+
+[ext_resource type="Script" uid="uid://c2o3rvk70tqhy" path="res://scence/next_day_3.gd" id="1_qmohu"]
+[ext_resource type="Texture2D" uid="uid://chx7ieiyp8is6" path="res://переход.png" id="1_uxq7l"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="2_qmohu"]
+[ext_resource type="Texture2D" uid="uid://dwmidcpqacvvw" path="res://деньги.png" id="3_bqwi7"]
+[ext_resource type="Texture2D" uid="uid://itp2rqw5nbo8" path="res://w.png" id="4_cmeep"]
+[ext_resource type="Texture2D" uid="uid://w15wrkrt757k" path="res://аааа.png" id="5_fn6cf"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="6_4sjgn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kgj6"]
+bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9882353, 0.52156866, 0.6117647, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 14
+expand_margin_left = 30.0
+expand_margin_top = 20.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0o3c"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk8g7"]
+bg_color = Color(0.89558446, 0.16479081, 0.7327512, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn34i"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(283, 0, 283, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrnas"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(566, 0, 283, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4trvo"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(849, 0, 283, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cq24"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(1132, 0, 283, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38gdf"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(0, 245, 283, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk18w"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(283, 245, 283, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0kua"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(849, 245, 283, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuobn"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(566, 245, 283, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrsn6"]
+atlas = ExtResource("4_cmeep")
+region = Rect2(1132, 245, 283, 245)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q43qs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn34i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrnas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4trvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cq24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38gdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk18w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0kua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuobn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrsn6")
+}],
+"loop": true,
+"name": &"cat",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swviu"]
+atlas = ExtResource("5_fn6cf")
+region = Rect2(0, 0, 493, 432)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpld8"]
+atlas = ExtResource("5_fn6cf")
+region = Rect2(493, 0, 493, 432)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aalo1"]
+atlas = ExtResource("5_fn6cf")
+region = Rect2(986, 0, 493, 432)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_keosy"]
+atlas = ExtResource("5_fn6cf")
+region = Rect2(1479, 0, 493, 432)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_we4x4"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swviu")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_mpld8")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_aalo1")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_keosy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dddh4"]
+bg_color = Color(0.58799785, 0.5877642, 0.7552259, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.711337, 0.4756204, 0.9999973, 1)
+
+[node name="Node2D" type="Node2D" unique_id=704881607]
+script = ExtResource("1_qmohu")
+
+[node name="Переход" type="Sprite2D" parent="." unique_id=1134384537]
+position = Vector2(610.49994, 322.99994)
+scale = Vector2(0.8771307, 0.8515625)
+texture = ExtResource("1_uxq7l")
+
+[node name="Ui" type="CanvasLayer" parent="Переход" unique_id=1934785488]
+
+[node name="Panel" type="Panel" parent="Переход/Ui" unique_id=1690563464]
+offset_left = 436.0
+offset_top = 284.0
+offset_right = 740.0
+offset_bottom = 438.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7kgj6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Переход/Ui/Panel" unique_id=1240747694]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Переход/Ui/Panel/VBoxContainer" unique_id=1492870209]
+layout_mode = 2
+
+[node name="LabelMoney" type="Label" parent="Переход/Ui/Panel/VBoxContainer/HBoxContainer" unique_id=1586360705]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qmohu")
+text = "3000 РУБ
+"
+
+[node name="TextureRect" type="TextureRect" parent="Переход/Ui/Panel/VBoxContainer/HBoxContainer" unique_id=1982250035]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.85
+texture = ExtResource("3_bqwi7")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Переход/Ui/Panel/VBoxContainer" unique_id=843624074]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="Переход/Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=387262674]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qmohu")
+text = "
+ЭНЕРГИЯ
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="Переход/Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=960811133]
+modulate = Color(0, 0.83192545, 0.44328564, 1)
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+value = 60.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Переход/Ui/Panel/VBoxContainer" unique_id=1353498941]
+layout_mode = 2
+
+[node name="LabelHappiness" type="Label" parent="Переход/Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=1249056537]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qmohu")
+text = "СЧАСТЬЕ"
+
+[node name="ProgressBar" type="ProgressBar" parent="Переход/Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=78765628]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/background = SubResource("StyleBoxFlat_g0o3c")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yk8g7")
+value = 60.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=12569925]
+position = Vector2(834, 512)
+scale = Vector2(0.88494325, 0.8372395)
+sprite_frames = SubResource("SpriteFrames_q43qs")
+animation = &"cat"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1467904654]
+position = Vector2(975, 386)
+scale = Vector2(1.091278, 1.0462962)
+sprite_frames = SubResource("SpriteFrames_we4x4")
+animation = &"idle"
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=1624796440]
+position = Vector2(572, 136)
+scale = Vector2(0.58550733, 0.375)
+texture = ExtResource("6_4sjgn")
+
+[node name="Label" type="Label" parent="." unique_id=280354026]
+offset_left = 369.0
+offset_top = 95.0
+offset_right = 801.0
+offset_bottom = 187.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qmohu")
+theme_override_font_sizes/font_size = 18
+text = "Вот твои итоги за день! 
+Внимательно посмтотри 
+на них и переходи к 
+следующему дню"
+
+[node name="ButtonToNext" type="Button" parent="." unique_id=691610114]
+offset_left = 468.0
+offset_top = 492.0
+offset_right = 676.0
+offset_bottom = 546.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qmohu")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_dddh4")
+text = "Далее"
+
+[connection signal="pressed" from="ButtonToNext" to="." method="_on_button_to_next_pressed"]

@@ -2,14 +2,14 @@ extends Node2D
 
 var caught = 0
 var missed = 0
-var max_misses = 10
+var max_misses = 3
 var item_template = preload("res://scence/item.tscn")
 
 @onready var btn_retry = $ButtonRetry
 @onready var btn_evening = $ButtonEvening
 
 func _ready():
-	# Прячем кнопки в самом начале
+	
 	btn_retry.visible = false
 	btn_evening.visible = false
 
@@ -31,11 +31,11 @@ func _on_item_missed():
 		game_over()
 
 func game_over():
-	get_tree().paused = true  # Ставим игру на паузу
-	btn_retry.visible = true  # Показываем кнопку
-	btn_evening.visible = true # Показываем кнопку
+	get_tree().paused = true 
+	btn_retry.visible = true  
+	btn_evening.visible = true 
 
-# Сигналы кнопок (должны быть подключены в редакторе!)
+
 func _on_button_retry_pressed():
 	get_tree().paused = false
 	get_tree().reload_current_scene()

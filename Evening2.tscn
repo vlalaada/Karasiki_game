@@ -89,15 +89,15 @@ scale = Vector2(0.7742754, 0.7167552)
 texture = ExtResource("4_qxy8p")
 
 [node name="ОкноДляВыбораДлинное" type="Sprite2D" parent="." unique_id=2116906155]
-position = Vector2(619.5, 53.9375)
+position = Vector2(607.00006, 58)
 scale = Vector2(0.4528986, 0.2554854)
 texture = ExtResource("5_yjh4a")
 
 [node name="Label2" type="Label" parent="." unique_id=2079160343]
-offset_left = 357.0
-offset_top = 42.0
-offset_right = 884.0
-offset_bottom = 73.0
+offset_left = 347.0
+offset_top = 48.0
+offset_right = 874.0
+offset_bottom = 79.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_hyhmi")
 theme_override_font_sizes/font_size = 17
@@ -197,7 +197,7 @@ text = "Не пойти
 и сделать
 уроки
 +400 руб
-(от мамы)
+
 -5🤩
 -5⚡"
 
