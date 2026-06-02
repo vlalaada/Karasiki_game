@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif; background: #f0f0f0; padding: 10px; }
+        #chat { height: 200px; overflow-y: scroll; border: 1px solid #ccc; background: white; margin-bottom: 10px; padding: 5px; }
+    </style>
+</head>
+<body>
+    <div id="chat"></div>
+    <input type="text" id="msg" placeholder="Спроси что-нибудь...">
+    <button onclick="ask()">Отправить</button>
+
+    <script>
+        async function ask() {
+            let msg = document.getElementById('msg').value;
+            document.getElementById('chat').innerHTML += `<p><b>Вы:</b> ${msg}</p>`;
+
+            let res = await fetch('http://127.0.0.1:8000/ask-bot', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({message: msg})
+            });
+            let data = await res.json();
+            document.getElementById('chat').innerHTML += `<p><b>Бот:</b> ${data.reply}</p>`;
+        }
+    </script>
+</body>
+</html>
