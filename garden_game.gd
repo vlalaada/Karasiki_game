@@ -1,25 +1,25 @@
 extends Node2D
 
-# Переменные
+
 var money = 200
 
-# Ссылки на интерфейс
+
 @onready var money_label = $CanvasLayer/Label
 @onready var buy_button = $CanvasLayer/BueButton
 @onready var water_button = $CanvasLayer/WaterButton
 @onready var next_button = $ButtonToNext
-# Узлы для победного сообщения
+
 @onready var corgi_node = $"Корги"
 @onready var message_label = $"Корги/Label"
 
-# Списки объектов
+
 @onready var seeds_list = [$"Семена", $"Семена2", $"Семена4"]
 @onready var carrots_list = [$"Area2D", $"Area2D2", $"Area2D3", $"Area2D4"]
 
 func _ready():
 	update_money_label()
 	
-	# Прячем всё при старте
+
 	for s in seeds_list: s.visible = false
 	for m in carrots_list:
 		m.visible = false
@@ -33,7 +33,7 @@ func _ready():
 func update_money_label():
 	money_label.text = "Деньги: " + str(money)
 
-# Функция для эффекта печатающегося текста
+
 func show_victory_message(text):
 	corgi_node.visible = true
 	message_label.visible = true
@@ -44,24 +44,24 @@ func show_victory_message(text):
 		message_label.visible_characters = i
 		await get_tree().create_timer(0.05).timeout
 
-# 1. Покупка семян
+
 func _on_bue_button_pressed():
 	if money >= 100:
 		money -= 100
 		update_money_label()
 		for s in seeds_list: s.visible = true
-		buy_button.visible = false # Скрываем кнопку покупки
+		buy_button.visible = false 
 		water_button.visible = true
 
-# 2. Полив
+
 func _on_water_button_pressed():
 	for s in seeds_list: s.visible = false
 	for m in carrots_list:
 		m.visible = true
 		m.get_node("CollisionShape2D").disabled = false 
-	water_button.visible = false # Скрываем кнопку полива
+	water_button.visible = false 
 
-# 3. Сбор урожая
+
 func _on_carrot_pressed(carrot):
 	if carrot.visible:
 		money += 150
@@ -80,11 +80,11 @@ func check_if_harvest_finished():
 		next_button.visible = true
 		show_victory_message("Ура! Ты отлично распорядился\n"+"деньгами. Ты вложил 100 рублей\n"+"в семена, а получил 700!\n"+"Видишь, как маленькая сумма\n"+"превращается в большую, если\n"+"правильно её использовать?\n")
 
-# 4. Переход далее
+
 func _on_button_to_next_pressed():
 	get_tree().change_scene_to_file("res://scence/NextDay3.tscn")
 
-# 5. Обработчики кликов
+
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed: _on_carrot_pressed($Area2D)
 

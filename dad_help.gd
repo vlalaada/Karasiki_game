@@ -10,7 +10,7 @@ var collected_items = []
 @onready var message_label = $Label
 @onready var corgi_node = $"Корги"
 
-# Словарь для связи имен с узлами продуктов на сцене
+
 @onready var product_nodes = {
 	"Яблоко": $Яблоко,
 	"Морковь": $Морковь,
@@ -22,7 +22,7 @@ var collected_items = []
 }
 
 func _ready():
-	# Скрываем элементы при старте
+	
 	corgi_node.visible = false
 	message_label.visible = false
 	next_button.visible = false
@@ -30,7 +30,7 @@ func _ready():
 	
 	budget_label.text = "Бюджет:\n" + str(budget) + " руб"
 	
-	# Подключаем сигналы кнопок
+	
 	$Яблоко/AppleButton.pressed.connect(on_item_clicked.bind("Яблоко", 50))
 	$Морковь/CarrotButton.pressed.connect(on_item_clicked.bind("Морковь", 100))
 	$Молоко/MilkButton.pressed.connect(on_item_clicked.bind("Молоко", 100))
@@ -44,20 +44,20 @@ func on_item_clicked(item_name, price):
 	if item_name in collected_items:
 		return
 	
-	# Исчезновение предмета
+	
 	if product_nodes.has(item_name):
 		product_nodes[item_name].hide() 
 	
-	# Логика бюджета
+	
 	budget -= price
 	budget_label.text = "Бюджет:\n" + str(budget) + " руб"
 	collected_items.append(item_name)
 	
-	# Проверка покупки (ждем 4 предмета)
+	
 	if collected_items.size() == 4:
 		validate_shopping()
 
-# Функция для анимации "бегущего" текста
+
 func play_text_animation(text_to_show):
 	message_label.text = text_to_show
 	message_label.visible_characters = 0 
@@ -73,7 +73,7 @@ func validate_shopping():
 		if item not in required_items:
 			all_correct = false
 	
-	# Показываем корги и текст при завершении
+	
 	corgi_node.visible = true
 	message_label.visible = true
 	

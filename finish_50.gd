@@ -1,6 +1,6 @@
 extends Node2D
 
-# Например: $ТекстовоеОблачко/Label
+
 @onready var message_label = $Label
 
 
@@ -17,11 +17,11 @@ func update_ui():
 func show_victory_text():
 	var text = "Результат впечатляет!\n"+"Твой кошелек полон,\n"+"но отдых прошел не\n"+"так ярко, как мог бы.\n"+"Ты умеешь копить, но\n"+"пора учиться и отдыхать!"
 	
-	# Настраиваем Label
+
 	message_label.text = text
 	message_label.visible_characters = 0
 	
-	# Цикл печатной машинки
+
 	for i in range(text.length() + 1):
 		message_label.visible_characters = i
 		await get_tree().create_timer(0.05).timeout

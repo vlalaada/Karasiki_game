@@ -18,7 +18,7 @@ func _ready():
 	
 	$Area2D9.area_entered.connect(_on_envelope_area_entered)
 
-# Функция для эффекта печатающегося текста
+
 func show_message(text):
 	message_label.text = text
 	message_label.visible_characters = 0 

@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var value = 10 # Укажи номинал в инспекторе!
+@export var value = 10 
 
 var dragging = false
 var offset = Vector2.ZERO
