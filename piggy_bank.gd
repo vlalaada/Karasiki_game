@@ -2,7 +2,7 @@ extends Area2D
 
 var dragging = false
 var offset = Vector2.ZERO
-# Задаем фиксированную высоту (Y), где должна ездить свинья
+
 @export var fixed_y: float = 0.0 
 
 func _input_event(viewport, event, shape_idx):
@@ -15,11 +15,11 @@ func _input_event(viewport, event, shape_idx):
 
 func _process(delta):
 	if dragging:
-		# Получаем новую позицию мыши
+		
 		var mouse_pos = get_global_mouse_position()
 		
-		# Двигаем только по X, учитывая смещение (offset.x)
+	
 		global_position.x = mouse_pos.x + offset.x
 		
-		# Фиксируем Y, чтобы она не могла двигаться вверх или вниз
+
 		global_position.y = fixed_y

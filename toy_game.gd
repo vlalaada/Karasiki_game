@@ -7,7 +7,6 @@ var item_template = preload("res://scence/item.tscn")
 
 @onready var btn_retry = $ButtonRetry
 @onready var btn_evening = $ButtonEvening
-# Ссылки на новые узлы (убедись, что они созданы в сцене)
 @onready var corgi_node = $"Корги"
 @onready var message_label = $"Корги/Label"
 
@@ -24,7 +23,7 @@ func _on_spawner_timeout():
 	item.missed.connect(_on_item_missed)
 	add_child(item)
 
-# Функция для "бегущего" текста
+
 func show_game_over_message(text):
 	corgi_node.visible = true
 	message_label.visible = true
@@ -50,7 +49,7 @@ func game_over():
 	get_tree().paused = true 
 	btn_retry.visible = true  
 	btn_evening.visible = true 
-	# Запускаем сообщение
+	
 	show_game_over_message("Ой! Кажется, ты упустил\n"+"3 монетки. Чтобы заработать\n"+"много денег, нужно\n"+"внимательнее отнестись к\n"+"своему делу! Попробуй ещё\n"+"раз или продолжай свой путь")
 
 func _on_button_retry_pressed():

@@ -5,7 +5,7 @@ extends Node2D
 
 func _ready():
 	btn_result.visible = false
-	# Запускаем "печатную машинку"
+	
 	show_welcome_message()
 
 func show_welcome_message():
@@ -19,21 +19,21 @@ func show_welcome_message():
 		
 	btn_result.visible = true
 
-# --- ЛОГИКА ПЕРЕХОДА К КОНЦОВКАМ ---
+
 func _on_button_to_evening_pressed():
 	var next_scene = ""
 	
-	# ПРОВЕРКА УСЛОВИЙ
+	
 	if GameState.money >= 5500:
 		if GameState.happiness >= 30 and GameState.energy >= 30:
-			# Идеальный финал: много денег + хорошие параметры
+			
 			next_scene = "res://scence/FinalHappy.tscn"
 		else:
-			# Компромиссный финал: много денег, но не хватает параметров
+			
 			next_scene = "res://scence/Finish50.tscn"
 	else:
-		# Финал при нехватке денег
+		
 		next_scene = "res://scence/FinalSad.tscn"
 	
-	# Переход
+	
 	get_tree().change_scene_to_file(next_scene)

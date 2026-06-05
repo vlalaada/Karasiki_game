@@ -1,18 +1,18 @@
 extends Node2D
 
-# --- Глобальные переменные ---
+
 var budget = 500
 var happiness = 0
 var items_bought = 0
 
-# --- Ссылки на узлы (проверь пути в своей сцене!) ---
+
 @onready var shop_panel = $CanvasLayer/ShopPanel
 @onready var btn_next = $ButtonToNext
 @onready var btn_retry = $ButtonRetry
 @onready var corgi = $"Корги"
 @onready var message_label = $"Корги/Label"
 
-# --- Данные о товарах ---
+
 @onready var shop_buttons = {
 	"pizza": $CanvasLayer/ShopPanel/ButtonPizza,
 	"cake": $CanvasLayer/ShopPanel/ButtonCake,
@@ -28,7 +28,7 @@ var shop_data = {
 }
 
 func _ready():
-	# Начальное состояние интерфейса
+	
 	shop_panel.visible = false
 	btn_next.visible = false
 	btn_retry.visible = false
@@ -37,7 +37,7 @@ func _ready():
 	$HappinessBar.max_value = 100
 	update_ui()
 
-# --- Логика магазина ---
+
 func _on_plus_pressed():
 	shop_panel.visible = true
 
@@ -47,11 +47,11 @@ func _on_buy_product(item_id):
 	var btn = shop_buttons[item_id]
 	
 	if group != null:
-		# Показываем спрайты купленного товара
+		
 		for sprite in group.get_children():
 			sprite.visible = true
 			
-		# Блокируем кнопку покупки
+		
 		if btn != null:
 			btn.disabled = true
 			
@@ -62,7 +62,7 @@ func _on_buy_product(item_id):
 		shop_panel.visible = false
 		update_ui()
 		
-		# Проверка окончания игры после 3-й покупки
+		
 		if items_bought == 3:
 			var plus_node = get_node_or_null("Plus")
 			if plus_node: plus_node.disabled = true 
@@ -71,11 +71,11 @@ func _on_buy_product(item_id):
 		print("Ошибка: группа " + item.group_name + " не найдена!")
 
 func check_game_result():
-	# Активируем финальный экран
+	
 	corgi.visible = true
 	message_label.visible = true
 	
-	# Выбор текста в зависимости от условий
+	
 	if happiness >= 100 and budget > 0:
 		message_label.text = "Блестящий результат!\n"+"Максимальное веселье\n"+"при маленьких тратах.\n"+"Друзья в восторге от\n"+"твоего выбора!"
 		btn_next.visible = true
@@ -86,10 +86,10 @@ func check_game_result():
 		message_label.text = "Не расстраивайся!\n"+"Попробуй выбрать\n"+"другие предметы,чтобы\n"+"собрать идеальный\n"+"набор для праздника"
 		btn_retry.visible = true
 	
-	# Запускаем "печатную машинку"
+
 	animate_text()
 
-# --- Функция "Печатная машинка" ---
+
 func animate_text():
 	message_label.visible_characters = 0
 	var text_to_show = message_label.text
@@ -98,7 +98,7 @@ func animate_text():
 		message_label.visible_characters = i
 		await get_tree().create_timer(0.05).timeout
 
-# --- Интерфейс ---
+
 func update_ui():
 	var label = $MoneyBar/budget
 	label.text = str(budget) + " руб."
@@ -110,7 +110,7 @@ func update_ui():
 		
 	$HappinessBar.value = happiness
 
-# --- Сигналы кнопок ---
+
 func _on_button_to_next_pressed():
 	get_tree().change_scene_to_file("res://scence/переход8.tscn")
 

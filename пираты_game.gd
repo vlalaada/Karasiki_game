@@ -2,10 +2,10 @@ extends Node2D
 
 @onready var corgi = $"Корги"
 @onready var message_label = $"Корги/Label"
-@onready var btn_retry = $ButtonRetry # Укажи верный путь к кнопке "Попробовать снова"
-@onready var btn_evening = $ButtonEvening # Укажи верный путь к кнопке "Перейти к вечеру"
+@onready var btn_retry = $ButtonRetry 
+@onready var btn_evening = $ButtonEvening 
 
-var choice_made = false # Флаг: был ли уже сделан выбор
+var choice_made = false 
 
 func _ready():
   corgi.visible = false
@@ -13,10 +13,10 @@ func _ready():
   btn_retry.visible = false
   btn_evening.visible = false
 
-# --- ЛОГИКА СУНДУКОВ ---
+
 
 func _on_сундук_1_pressed():
-  if choice_made: return # Если выбор сделан, ничего не делаем
+  if choice_made: return 
   choice_made = true
   
   show_corgi_message("Жду...")
@@ -30,9 +30,9 @@ func _on_сундук_2_pressed():
   
   var chance = randi() % 2
   if chance == 1:
-    show_corgi_message("Ты выбрал риск\n"+"и выиграл 100 рублей-\n"+"тебе повезло!")
+	show_corgi_message("Ты выбрал риск\n"+"и выиграл 100 рублей-\n"+"тебе повезло!")
   else:
-    show_corgi_message("Ты выбрал риск и\n"+"проиграл - тебе не\n"+"повезло.")
+	show_corgi_message("Ты выбрал риск и\n"+"проиграл - тебе не\n"+"повезло.")
   show_final_buttons()
 
 func _on_сундук_3_pressed():
@@ -57,8 +57,8 @@ func show_corgi_message(text):
   
   message_label.visible_characters = 0
   for i in range(message_label.text.length() + 1):
-    message_label.visible_characters = i
-    await get_tree().create_timer(0.05).timeout
+	message_label.visible_characters = i
+	await get_tree().create_timer(0.05).timeout
 
 
 func _on_button_retry_pressed():
