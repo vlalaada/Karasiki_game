@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://crv2fbbprex03" path="res://яблоко.png" id="4_2iyg0"]
 [ext_resource type="FontFile" uid="uid://c2hshch2aq8hj" path="res://ofont.ru_Buira.ttf" id="5_1jjrr"]
 [ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="7_2iyg0"]
+[ext_resource type="Texture2D" uid="uid://cqxoyf1pcj8kn" path="res://корги.png" id="9_ecbsb"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="10_p7kdp"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="10_wenhp"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="11_1ji5x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jjrr"]
 bg_color = Color(0.81178766, 0.72538966, 0.9138015, 1)
@@ -41,6 +45,15 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.8850821, 0.5525792, 0.7992349, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6t0r"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66bbg"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld547"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1416579348]
 script = ExtResource("1_toc63")
@@ -167,6 +180,103 @@ theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_wenhp")
 text = "Проверить"
 
+[node name="Корги" type="Sprite2D" parent="." unique_id=1601027157]
+position = Vector2(378, 526.00006)
+scale = Vector2(0.79689807, 0.78726286)
+texture = ExtResource("9_ecbsb")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="Корги" unique_id=1018588123]
+position = Vector2(447.987, -268.01727)
+scale = Vector2(0.7365515, 0.5937282)
+texture = ExtResource("10_wenhp")
+
+[node name="Label3" type="Label" parent="." unique_id=2119624184]
+offset_left = 535.0
+offset_top = 244.0
+offset_right = 575.0
+offset_bottom = 267.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_2iyg0")
+theme_override_font_sizes/font_size = 14
+
+[node name="Bla" type="Control" parent="." unique_id=923785877]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("10_p7kdp")
+
+[node name="Button" type="Button" parent="Bla" unique_id=565506514]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -187.0
+offset_right = 667.0
+offset_bottom = -160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_2iyg0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d6t0r")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=1314165561]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=1323504990]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 483.547
+offset_top = -260.804
+offset_right = 724.547
+offset_bottom = -156.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_66bbg")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=1344436121]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 241.20105
+offset_bottom = 105.0
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=1627375933]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -381.0
+offset_right = 665.9949
+offset_bottom = -320.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ld547")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=1624503324]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = -96.64229
+offset_top = -500.61502
+offset_right = 143.35771
+offset_bottom = -400.61502
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=1770398783]
+offset_left = -76.0
+offset_top = 437.0
+offset_right = 1204.0
+offset_bottom = 1135.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("11_1ji5x")
+texture_pressed = ExtResource("11_1ji5x")
+texture_hover = ExtResource("11_1ji5x")
+
 [connection signal="pressed" from="ButtonEvening" to="." method="_on_button_evening_pressed"]
 [connection signal="pressed" from="ButtonRetry" to="." method="_on_button_retry_pressed"]
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]

@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://3d2wq6r4hcqu" path="res://веселая девочка.png" id="2_63lcg"]
 [ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="3_baht8"]
 [ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="4_u7lkv"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="6_u7lkv"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="7_577yh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_577yh"]
 bg_color = Color(0.9655903, 0.7722691, 1, 1)
@@ -18,6 +20,15 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54jhn"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wt4b"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3nkma"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
+
 [node name="Node2D" type="Node2D" unique_id=1734597808]
 script = ExtResource("1_63lcg")
 
@@ -27,20 +38,20 @@ scale = Vector2(0.8160511, 0.84244806)
 texture = ExtResource("1_yam53")
 
 [node name="ВеселаяДевочка" type="Sprite2D" parent="." unique_id=832572415]
-position = Vector2(303.99997, 380.00003)
+position = Vector2(331.99997, 382.00003)
 scale = Vector2(0.776087, 0.71675533)
 texture = ExtResource("2_63lcg")
 
 [node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=232153010]
-position = Vector2(729.75, 230.00002)
+position = Vector2(759, 238.00002)
 scale = Vector2(0.7467391, 0.5890958)
 texture = ExtResource("3_baht8")
 
 [node name="Label" type="Label" parent="." unique_id=1283450141]
-offset_left = 485.0
-offset_top = 141.0
-offset_right = 1061.0
-offset_bottom = 336.0
+offset_left = 510.0
+offset_top = 152.0
+offset_right = 1086.0
+offset_bottom = 347.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_u7lkv")
 theme_override_font_sizes/font_size = 19
@@ -54,14 +65,92 @@ text = "Сейчас ты можешь поиграть в
            Удачи!"
 
 [node name="ButtonToEvening" type="Button" parent="." unique_id=1614865380]
-offset_left = 566.0
-offset_top = 401.0
-offset_right = 909.0
-offset_bottom = 485.0
+offset_left = 607.0
+offset_top = 410.0
+offset_right = 950.0
+offset_bottom = 494.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_u7lkv")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_577yh")
 text = "Начать игру"
 
+[node name="Bla" type="Control" parent="." unique_id=2084824107]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("6_u7lkv")
+
+[node name="Button" type="Button" parent="Bla" unique_id=658463016]
+layout_mode = 0
+offset_left = 424.0
+offset_top = -153.0
+offset_right = 664.0
+offset_bottom = -126.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_u7lkv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_54jhn")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=1104064693]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=171064240]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 479.547
+offset_top = -222.804
+offset_right = 720.547
+offset_bottom = -118.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_2wt4b")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=2132717653]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 6.0
+offset_top = -50.000008
+offset_right = 244.0
+offset_bottom = 49.999992
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=2054507641]
+layout_mode = 0
+offset_left = 421.0
+offset_top = -352.0
+offset_right = 666.0
+offset_bottom = -291.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3nkma")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=340067166]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = 426.0
+offset_top = -270.0
+offset_right = 666.0
+offset_bottom = -170.0
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=258363202]
+offset_left = -73.00001
+offset_top = 446.00003
+offset_right = 1207.0
+offset_bottom = 1144.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("7_577yh")
+texture_pressed = ExtResource("7_577yh")
+texture_hover = ExtResource("7_577yh")
+
 [connection signal="pressed" from="ButtonToEvening" to="." method="_on_button_to_evening_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]

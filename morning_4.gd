@@ -11,13 +11,13 @@ func update_ui():
 	$Ui/Panel/VBoxContainer/HBoxContainer3/ProgressBar.value = GameState.happiness
 
 func lock_choices():
-	$"Колесо/GiftButton2".disabled = true
 	$"Купюра/GiftButton".disabled = true
+	$"Колесо/GiftButton2".disabled = true
 
 
 func _on_gift_button_pressed():
 	lock_choices()
-	GameState.update_stats(500, 0, 0)
+	GameState.update_stats(+1000, 0, 0)
 	update_ui()
 	
 	$ButtonToEvening.visible = true
@@ -25,13 +25,12 @@ func _on_gift_button_pressed():
 
 func _on_gift_button_2_pressed():
 	lock_choices()
-	GameState.update_stats(300, 15, +10)
+	GameState.update_stats(+1500, 15, +10)
 	update_ui()
 	
 	
-	$ButtonToEvening.visible = true
-
+	get_tree().change_scene_to_file("res://scence/переход7.tscn")
 
 
 func _on_button_to_evening_pressed():
-	get_tree().change_scene_to_file("res://scence/Evening3.tscn")
+	get_tree().change_scene_to_file("res://scence/Evening4.tscn")

@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dwmidcpqacvvw" path="res://деньги.png" id="7_rjb88"]
 [ext_resource type="Texture2D" uid="uid://cxj802idlqc47" path="res://подарок.png" id="8_fojyn"]
 [ext_resource type="Texture2D" uid="uid://ja7dv658bewn" path="res://смайлик.png" id="9_vpdmi"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="10_fojyn"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="11_vpdmi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdg0b"]
 bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
@@ -63,6 +65,15 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56jhf"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3oy8"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6eer0"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
+
 [node name="Node2D" type="Node2D" unique_id=1437084643]
 script = ExtResource("1_7y3dl")
 
@@ -72,12 +83,12 @@ scale = Vector2(0.8203125, 0.83984375)
 texture = ExtResource("1_2mjmr")
 
 [node name="ВеселаяДевочка" type="Sprite2D" parent="." unique_id=1488191509]
-position = Vector2(279, 381)
+position = Vector2(320, 389)
 scale = Vector2(0.741395, 0.6712101)
 texture = ExtResource("2_q8se4")
 
 [node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=1014483602]
-position = Vector2(676, 295)
+position = Vector2(709, 292)
 scale = Vector2(0.6605525, 0.6650598)
 texture = ExtResource("3_ywbq4")
 
@@ -186,7 +197,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_yxra1")
 value = 60.0
 
 [node name="Подарок" type="Sprite2D" parent="." unique_id=250174251]
-position = Vector2(558.00006, 221)
+position = Vector2(580, 224.00002)
 scale = Vector2(0.44571647, 0.40582657)
 texture = ExtResource("8_fojyn")
 
@@ -206,7 +217,7 @@ text = "Сдать
 "
 
 [node name="Смайлик" type="Sprite2D" parent="." unique_id=2005017647]
-position = Vector2(791.99994, 224.99997)
+position = Vector2(818.99994, 231.99998)
 scale = Vector2(0.44497785, 0.38143632)
 texture = ExtResource("9_vpdmi")
 
@@ -235,6 +246,84 @@ theme_override_fonts/font = ExtResource("4_lthba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_23mpd")
 text = "Перейти к вечеру"
 
+[node name="Bla" type="Control" parent="." unique_id=1542523876]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("10_fojyn")
+
+[node name="Button" type="Button" parent="Bla" unique_id=1275822342]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -187.0
+offset_right = 667.0
+offset_bottom = -160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lthba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_56jhf")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=529859465]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=284254216]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 483.547
+offset_top = -260.804
+offset_right = 724.547
+offset_bottom = -156.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_w3oy8")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=1054454004]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 241.20105
+offset_bottom = 105.0
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=752513639]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -381.0
+offset_right = 665.9949
+offset_bottom = -320.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_6eer0")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=925040290]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = -96.64229
+offset_top = -500.61502
+offset_right = 143.35771
+offset_bottom = -400.61502
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=160894973]
+offset_left = -76.0
+offset_top = 437.0
+offset_right = 1204.0
+offset_bottom = 1135.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("11_vpdmi")
+texture_pressed = ExtResource("11_vpdmi")
+texture_hover = ExtResource("11_vpdmi")
+
 [connection signal="pressed" from="Подарок/GiftButton" to="." method="_on_gift_button_pressed"]
 [connection signal="pressed" from="Смайлик/SmileButton" to="." method="_on_smile_button_pressed"]
 [connection signal="pressed" from="ButtonToEvening" to="." method="_on_button_to_evening_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]

@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://itp2rqw5nbo8" path="res://w.png" id="4_cmeep"]
 [ext_resource type="Texture2D" uid="uid://w15wrkrt757k" path="res://аааа.png" id="5_fn6cf"]
 [ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="6_4sjgn"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="8_cmeep"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="9_fn6cf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kgj6"]
 bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
@@ -157,6 +159,15 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.711337, 0.4756204, 0.9999973, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4sjgn"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q43qs"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_we4x4"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
+
 [node name="Node2D" type="Node2D" unique_id=704881607]
 script = ExtResource("1_qmohu")
 
@@ -277,4 +288,82 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_dddh4")
 text = "Далее"
 
+[node name="Bla" type="Control" parent="." unique_id=2113819830]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("8_cmeep")
+
+[node name="Button" type="Button" parent="Bla" unique_id=792590175]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -187.0
+offset_right = 667.0
+offset_bottom = -160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qmohu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4sjgn")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=1509489111]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=1398449466]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 483.547
+offset_top = -260.804
+offset_right = 724.547
+offset_bottom = -156.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_q43qs")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=1852601835]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = -3.0
+offset_top = 5.0
+offset_right = 236.20105
+offset_bottom = 105.0
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=371554448]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -381.0
+offset_right = 665.9949
+offset_bottom = -320.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_we4x4")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=1439933405]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = -96.64229
+offset_top = -500.61502
+offset_right = 143.35771
+offset_bottom = -400.61502
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=2049626630]
+offset_left = -76.0
+offset_top = 437.0
+offset_right = 1204.0
+offset_bottom = 1135.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("9_fn6cf")
+texture_pressed = ExtResource("9_fn6cf")
+texture_hover = ExtResource("9_fn6cf")
+
 [connection signal="pressed" from="ButtonToNext" to="." method="_on_button_to_next_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]

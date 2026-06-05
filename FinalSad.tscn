@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://b4bg57f53xu7e"]
+
+[ext_resource type="Script" uid="uid://bicquilirm0ri" path="res://scence/final_sad.gd" id="1_uphoa"]
+[ext_resource type="Texture2D" uid="uid://dtk6wtl1i2sw8" path="res://финал.png" id="2_uphoa"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="3_4877e"]
+[ext_resource type="Texture2D" uid="uid://dwmidcpqacvvw" path="res://деньги.png" id="4_i2oda"]
+[ext_resource type="Texture2D" uid="uid://b6ymv5lcil7jf" path="res://пока.png" id="5_uphoa"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="6_yddpn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5is4"]
+bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9882353, 0.52156866, 0.6117647, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 14
+expand_margin_left = 30.0
+expand_margin_top = 20.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nth4"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kym7o"]
+bg_color = Color(0.89558446, 0.16479081, 0.7327512, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yddpn"]
+atlas = ExtResource("5_uphoa")
+region = Rect2(512, 0, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4877e"]
+atlas = ExtResource("5_uphoa")
+region = Rect2(768, 0, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2oda"]
+atlas = ExtResource("5_uphoa")
+region = Rect2(1024, 0, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjs76"]
+atlas = ExtResource("5_uphoa")
+region = Rect2(512, 349, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5is4"]
+atlas = ExtResource("5_uphoa")
+region = Rect2(768, 349, 256, 349)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fiwsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yddpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4877e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2oda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjs76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5is4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=2142519274]
+script = ExtResource("1_uphoa")
+
+[node name="Финал" type="Sprite2D" parent="." unique_id=1600033231]
+position = Vector2(594, 329)
+scale = Vector2(0.86221594, 0.8463542)
+texture = ExtResource("2_uphoa")
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=1131385189]
+
+[node name="Panel" type="Panel" parent="Ui" unique_id=946347621]
+offset_left = 491.0
+offset_top = 44.0
+offset_right = 787.0
+offset_bottom = 187.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t5is4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ui/Panel" unique_id=1355453489]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -6.0
+offset_right = 272.0
+offset_bottom = 140.0
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1883911013]
+layout_mode = 2
+
+[node name="LabelMoney" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=732358891]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4877e")
+text = "3000 РУБ
+"
+
+[node name="TextureRect" type="TextureRect" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=1230706579]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.85
+texture = ExtResource("4_i2oda")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1545348959]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=1189001819]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4877e")
+text = "
+ЭНЕРГИЯ
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=480383449]
+modulate = Color(0, 0.83192545, 0.44328564, 1)
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+value = 60.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1348699230]
+layout_mode = 2
+
+[node name="LabelHappiness" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=251913103]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4877e")
+text = "СЧАСТЬЕ"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=1051462734]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/background = SubResource("StyleBoxFlat_8nth4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kym7o")
+value = 60.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=466848839]
+position = Vector2(615.1211, 405.75003)
+scale = Vector2(1.5165713, 1.2994269)
+sprite_frames = SubResource("SpriteFrames_fiwsd")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=414926467]
+position = Vector2(249.06253, 434)
+scale = Vector2(0.5071558, 0.48853064)
+texture = ExtResource("6_yddpn")
+
+[node name="Label" type="Label" parent="." unique_id=1990269613]
+offset_left = 87.0
+offset_top = 356.0
+offset_right = 143.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4877e")

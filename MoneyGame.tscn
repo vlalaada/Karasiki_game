@@ -15,9 +15,12 @@
 [ext_resource type="Script" uid="uid://3h2gorganqtg" path="res://scence/area_2d_7.gd" id="13_xuvtr"]
 [ext_resource type="Script" uid="uid://booa41pri64u8" path="res://scence/area_2d_8.gd" id="14_5by0r"]
 [ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="16_nniom"]
+[ext_resource type="Texture2D" uid="uid://cqxoyf1pcj8kn" path="res://корги.png" id="17_n5aa5"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="17_nqp1h"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="18_7bvh0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nw5a"]
-size = Vector2(190.57344, 101.1644)
+size = Vector2(199.89807, 103.51109)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4orqk"]
 size = Vector2(250.24527, 160.08386)
@@ -48,11 +51,20 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 anti_aliasing = false
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfewk"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aajpw"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwhp8"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
+
 [node name="Node2D" type="Node2D" unique_id=1412349028]
 script = ExtResource("1_vy5uy")
 
 [node name="Стол" type="Sprite2D" parent="." unique_id=1623951122]
-position = Vector2(572.50006, 323.50003)
+position = Vector2(576, 316)
 scale = Vector2(0.8316762, 0.8476563)
 texture = ExtResource("1_uln2u")
 
@@ -76,13 +88,13 @@ z_index = 10
 script = ExtResource("8_hfewk")
 
 [node name="100" type="Sprite2D" parent="Area2D3" unique_id=1845997507]
-position = Vector2(322.23676, 286.0492)
+position = Vector2(369, 281)
 rotation = -0.43284166
 scale = Vector2(0.32066652, 0.33805764)
 texture = ExtResource("5_gsna8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=51934560]
-position = Vector2(327.0978, 284.29807)
+position = Vector2(372.00003, 284.00003)
 rotation = -0.3228859
 shape = SubResource("RectangleShape2D_2nw5a")
 
@@ -106,13 +118,13 @@ z_index = 10
 script = ExtResource("11_dwhp8")
 
 [node name="11" type="Sprite2D" parent="Area2D5" unique_id=164297618]
-position = Vector2(313, 432.9999)
+position = Vector2(360, 437)
 rotation = -0.27052605
 scale = Vector2(0.29261008, 0.33045042)
 texture = ExtResource("3_mb38x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5" unique_id=1157529593]
-position = Vector2(315.34955, 437.55606)
+position = Vector2(359.7937, 431.6333)
 rotation = -0.3228859
 shape = SubResource("RectangleShape2D_2nw5a")
 
@@ -137,13 +149,13 @@ z_index = 10
 script = ExtResource("13_xuvtr")
 
 [node name="13" type="Sprite2D" parent="Area2D7" unique_id=1492804738]
-position = Vector2(519.99994, 328.99997)
+position = Vector2(546, 278)
 rotation = -0.78365284
 scale = Vector2(0.23847519, 0.30473343)
 texture = ExtResource("3_mb38x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7" unique_id=546482925]
-position = Vector2(515, 333.00006)
+position = Vector2(548.99994, 277.99997)
 rotation = -0.7784169
 shape = SubResource("RectangleShape2D_2nw5a")
 
@@ -232,6 +244,104 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_uplcq")
 text = "Попробовать 
 снова"
 
+[node name="Корги" type="Sprite2D" parent="." unique_id=848013389]
+z_index = 10
+position = Vector2(501.71875, 499.21875)
+scale = Vector2(0.9698117, 0.9117548)
+texture = ExtResource("17_n5aa5")
+
+[node name="ОкноДляВыбора2" type="Sprite2D" parent="Корги" unique_id=843165178]
+z_index = 11
+position = Vector2(372.52722, -206.43573)
+scale = Vector2(0.5603956, 0.31904522)
+texture = ExtResource("16_nniom")
+
+[node name="Label2" type="Label" parent="Корги" unique_id=1079402155]
+z_index = 12
+offset_left = 197.23547
+offset_top = -259.08145
+offset_right = 276.23547
+offset_bottom = -227.95248
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Bla" type="Control" parent="." unique_id=1314090786]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("17_nqp1h")
+
+[node name="Button" type="Button" parent="Bla" unique_id=880383437]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -187.0
+offset_right = 667.0
+offset_bottom = -160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_n5aa5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hfewk")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=1555734320]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=68669548]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 483.547
+offset_top = -260.804
+offset_right = 724.547
+offset_bottom = -156.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_aajpw")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=339299155]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = -3.0
+offset_top = 5.0
+offset_right = 236.20105
+offset_bottom = 105.0
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=1170874787]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -381.0
+offset_right = 665.9949
+offset_bottom = -320.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dwhp8")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=277471733]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = -96.64229
+offset_top = -500.61502
+offset_right = 143.35771
+offset_bottom = -400.61502
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=2085339276]
+offset_left = -76.0
+offset_top = 437.0
+offset_right = 1204.0
+offset_bottom = 1135.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("18_7bvh0")
+texture_pressed = ExtResource("18_7bvh0")
+texture_hover = ExtResource("18_7bvh0")
+
 [connection signal="area_entered" from="Area2D9" to="." method="_on_area_2d_9_area_entered"]
 [connection signal="pressed" from="ButtonEvening" to="." method="_on_button_evening_pressed"]
 [connection signal="pressed" from="ButtonRetry" to="." method="_on_button_retry_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]

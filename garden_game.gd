@@ -7,7 +7,10 @@ var money = 200
 @onready var money_label = $CanvasLayer/Label
 @onready var buy_button = $CanvasLayer/BueButton
 @onready var water_button = $CanvasLayer/WaterButton
-@onready var next_button = $ButtonToNext# Кнопка "Далее"
+@onready var next_button = $ButtonToNext
+# Узлы для победного сообщения
+@onready var corgi_node = $"Корги"
+@onready var message_label = $"Корги/Label"
 
 # Списки объектов
 @onready var seeds_list = [$"Семена", $"Семена2", $"Семена4"]
@@ -18,16 +21,28 @@ func _ready():
 	
 	# Прячем всё при старте
 	for s in seeds_list: s.visible = false
-	
 	for m in carrots_list:
 		m.visible = false
-		m.get_node("CollisionShape2D").disabled = true # Отключаем коллизию
-		
+		m.get_node("CollisionShape2D").disabled = true
+	
 	water_button.visible = false
-	next_button.visible = false # Кнопка Далее скрыта
+	next_button.visible = false
+	corgi_node.visible = false
+	message_label.visible = false
 
 func update_money_label():
 	money_label.text = "Деньги: " + str(money)
+
+# Функция для эффекта печатающегося текста
+func show_victory_message(text):
+	corgi_node.visible = true
+	message_label.visible = true
+	message_label.text = text
+	message_label.visible_characters = 0
+	
+	for i in range(text.length() + 1):
+		message_label.visible_characters = i
+		await get_tree().create_timer(0.05).timeout
 
 # 1. Покупка семян
 func _on_bue_button_pressed():
@@ -35,7 +50,7 @@ func _on_bue_button_pressed():
 		money -= 100
 		update_money_label()
 		for s in seeds_list: s.visible = true
-		buy_button.visible = false
+		buy_button.visible = false # Скрываем кнопку покупки
 		water_button.visible = true
 
 # 2. Полив
@@ -44,7 +59,9 @@ func _on_water_button_pressed():
 	for m in carrots_list:
 		m.visible = true
 		m.get_node("CollisionShape2D").disabled = false 
+	water_button.visible = false # Скрываем кнопку полива
 
+# 3. Сбор урожая
 func _on_carrot_pressed(carrot):
 	if carrot.visible:
 		money += 150
@@ -60,8 +77,8 @@ func check_if_harvest_finished():
 			all_gone = false
 	
 	if all_gone:
-		buy_button.visible = true
-		next_button.visible = true # Показываем кнопку Далее
+		next_button.visible = true
+		show_victory_message("Ура! Ты отлично распорядился\n"+"деньгами. Ты вложил 100 рублей\n"+"в семена, а получил 700!\n"+"Видишь, как маленькая сумма\n"+"превращается в большую, если\n"+"правильно её использовать?\n")
 
 # 4. Переход далее
 func _on_button_to_next_pressed():

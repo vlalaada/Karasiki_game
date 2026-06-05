@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://bkysfo0s0thm4"]
+
+[ext_resource type="Texture2D" uid="uid://dtaq6780njfjv" path="res://заставка.png" id="1_ao1fd"]
+[ext_resource type="Script" uid="uid://dl626w2um87sn" path="res://scence/заставка.gd" id="1_sptmb"]
+[ext_resource type="Texture2D" uid="uid://t5bhe8phb468" path="res://мини.png" id="2_jvgqg"]
+[ext_resource type="Texture2D" uid="uid://51tearf3iig3" path="res://окно для выбора длинное .png" id="4_6vvo0"]
+[ext_resource type="Texture2D" uid="uid://vnhjetr18pwk" path="res://в копилку.png" id="5_t082c"]
+[ext_resource type="Texture2D" uid="uid://2l5x2jqrslur" path="res://рама.png" id="6_6vvo0"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="7_6vvo0"]
+[ext_resource type="Texture2D" uid="uid://bkniji2jxsvkb" path="res://стрелка.png" id="7_t082c"]
+[ext_resource type="Script" uid="uid://cfwcaidn74fck" path="res://scence/chat_ui.gd" id="9_t082c"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="10_61llr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vvo0"]
+size = Vector2(88, 61)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvgqg"]
+bg_color = Color(0.9655903, 0.7722691, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7694622, 0.42408213, 0.9295625, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61llr"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wirvw"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u31tm"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1812391888]
+script = ExtResource("1_sptmb")
+
+[node name="Заставка" type="Sprite2D" parent="." unique_id=1667939918]
+position = Vector2(573.03125, 328.375)
+scale = Vector2(0.95968556, 0.8591503)
+texture = ExtResource("1_ao1fd")
+
+[node name="Рама" type="Sprite2D" parent="." unique_id=1635271125]
+position = Vector2(622.99994, 161)
+scale = Vector2(1.4826448, 0.8325243)
+texture = ExtResource("6_6vvo0")
+
+[node name="Мини" type="Sprite2D" parent="." unique_id=494812417]
+position = Vector2(631.7207, 372.23438)
+scale = Vector2(0.63473994, 0.573848)
+texture = ExtResource("2_jvgqg")
+
+[node name="ВКопилку" type="Sprite2D" parent="." unique_id=1053879339]
+position = Vector2(629, 152)
+texture = ExtResource("5_t082c")
+
+[node name="ОкноДляВыбораДлинное" type="Sprite2D" parent="." unique_id=738253804]
+position = Vector2(645, 452.00003)
+scale = Vector2(0.5648551, 0.35571805)
+texture = ExtResource("4_6vvo0")
+
+[node name="Label" type="Label" parent="." unique_id=1327468452]
+offset_left = 337.0
+offset_top = 420.0
+offset_right = 371.0
+offset_bottom = 443.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6vvo0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1808288020]
+
+[node name="Стрелка" type="Sprite2D" parent="Area2D" unique_id=1269077426]
+position = Vector2(941.00006, 462.99997)
+scale = Vector2(0.19025503, 0.19969529)
+texture = ExtResource("7_t082c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1469640818]
+position = Vector2(933, 464)
+shape = SubResource("RectangleShape2D_6vvo0")
+
+[node name="ButtonToEvening" type="Button" parent="." unique_id=1235980153]
+visible = false
+offset_left = 463.0
+offset_top = 567.0
+offset_right = 813.0
+offset_bottom = 637.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6vvo0")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_jvgqg")
+text = "Начать"
+
+[node name="Bla" type="Control" parent="." unique_id=1714065127]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 27.0
+offset_top = 562.0
+offset_right = 210.0
+offset_bottom = 638.0
+script = ExtResource("9_t082c")
+
+[node name="Button" type="Button" parent="Bla" unique_id=349374995]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -144.0
+offset_right = 232.0
+offset_bottom = -117.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6vvo0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_61llr")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=1319407402]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=1357829171]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 45.547005
+offset_top = -220.804
+offset_right = 286.547
+offset_bottom = -116.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_wirvw")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=45949066]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 102.0
+horizontal_scroll_mode = 0
+
+[node name="DisplayLabel" type="Label" parent="Bla/ChatWindow/ScrollContainer" unique_id=1999733132]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=812621023]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -337.0
+offset_right = 228.0
+offset_bottom = -276.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_u31tm")
+placeholder_text = "Введите текст"
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=1180701455]
+offset_left = -49.000008
+offset_top = 445.00003
+offset_right = 1231.0
+offset_bottom = 1143.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("10_61llr")
+texture_pressed = ExtResource("10_61llr")
+texture_hover = ExtResource("10_61llr")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="pressed" from="ButtonToEvening" to="." method="_on_button_to_evening_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]

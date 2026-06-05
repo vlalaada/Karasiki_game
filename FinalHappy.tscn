@@ -1,0 +1,328 @@
+[gd_scene format=3 uid="uid://bn4pg8jjic7vf"]
+
+[ext_resource type="Script" uid="uid://jhvgrquweof4" path="res://scence/final_happy.gd" id="1_j3ju5"]
+[ext_resource type="Texture2D" uid="uid://dtk6wtl1i2sw8" path="res://финал.png" id="1_kpc7m"]
+[ext_resource type="Texture2D" uid="uid://cc2cxqft7806g" path="res://велик.png" id="2_j3ju5"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="3_7w8mw"]
+[ext_resource type="Texture2D" uid="uid://dwmidcpqacvvw" path="res://деньги.png" id="4_howin"]
+[ext_resource type="Texture2D" uid="uid://0132q2q8sdf" path="res://ураа.png" id="5_e3ba6"]
+[ext_resource type="Texture2D" uid="uid://cl4f6xlbnnr74" path="res://конфети.png" id="7_7w8mw"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="8_howin"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iu0e1"]
+bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9882353, 0.52156866, 0.6117647, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 14
+expand_margin_left = 30.0
+expand_margin_top = 20.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcu60"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcbdu"]
+bg_color = Color(0.89558446, 0.16479081, 0.7327512, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj5hf"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(0, 0, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yi5a"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(256, 0, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_816cp"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(512, 0, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4wet"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(768, 0, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcxmh"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(1024, 0, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgefo"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(0, 349, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv7gl"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(256, 349, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnadu"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(512, 349, 256, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpxhe"]
+atlas = ExtResource("5_e3ba6")
+region = Rect2(768, 349, 256, 349)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ath21"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj5hf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yi5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_816cp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4wet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcxmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgefo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv7gl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnadu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpxhe")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_howin"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(0, 0, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3ba6"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(169, 0, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu0e1"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(338, 0, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcu60"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(507, 0, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcbdu"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(0, 123, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ath21"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(169, 123, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhj3u"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(338, 123, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sc3jg"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(507, 123, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g21ii"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(0, 246, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayfv4"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(169, 246, 169, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2ygi"]
+atlas = ExtResource("7_7w8mw")
+region = Rect2(338, 246, 169, 123)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4wrhg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_howin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3ba6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu0e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcu60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcbdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ath21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhj3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sc3jg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g21ii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayfv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2ygi")
+}],
+"loop": true,
+"name": &"conf",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1037384666]
+script = ExtResource("1_j3ju5")
+
+[node name="Финал" type="Sprite2D" parent="." unique_id=1622983454]
+position = Vector2(622, 322.00003)
+scale = Vector2(0.88423294, 0.859375)
+texture = ExtResource("1_kpc7m")
+
+[node name="Велик" type="Sprite2D" parent="." unique_id=348819992]
+position = Vector2(836.1023, 444.32944)
+rotation = -0.06981317
+scale = Vector2(0.25672045, 0.31088343)
+skew = 0.017453292
+texture = ExtResource("2_j3ju5")
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=990214582]
+
+[node name="Panel" type="Panel" parent="Ui" unique_id=1695996589]
+offset_left = 486.0
+offset_top = 34.0
+offset_right = 782.0
+offset_bottom = 177.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iu0e1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ui/Panel" unique_id=1286419726]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -6.0
+offset_right = 272.0
+offset_bottom = 140.0
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=935970590]
+layout_mode = 2
+
+[node name="LabelMoney" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=2097107937]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7w8mw")
+text = "3000 РУБ
+"
+
+[node name="TextureRect" type="TextureRect" parent="Ui/Panel/VBoxContainer/HBoxContainer" unique_id=605138746]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.85
+texture = ExtResource("4_howin")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=694929464]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=1074879638]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7w8mw")
+text = "
+ЭНЕРГИЯ
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer2" unique_id=1881259777]
+modulate = Color(0, 0.83192545, 0.44328564, 1)
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+value = 60.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Ui/Panel/VBoxContainer" unique_id=1046223523]
+layout_mode = 2
+
+[node name="LabelHappiness" type="Label" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=288688410]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7w8mw")
+text = "СЧАСТЬЕ"
+
+[node name="ProgressBar" type="ProgressBar" parent="Ui/Panel/VBoxContainer/HBoxContainer3" unique_id=313089836]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/background = SubResource("StyleBoxFlat_dcu60")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qcbdu")
+value = 60.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=201144905]
+position = Vector2(653, 429.125)
+scale = Vector2(1.5546871, 1.3989972)
+sprite_frames = SubResource("SpriteFrames_ath21")
+animation = &"happy"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1976050278]
+position = Vector2(240.00003, 197)
+rotation = 0.27052602
+scale = Vector2(4.2477055, 3.424838)
+skew = 0.22863813
+sprite_frames = SubResource("SpriteFrames_4wrhg")
+animation = &"conf"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=227770243]
+position = Vector2(975, 272)
+rotation = 0.27052602
+scale = Vector2(4.2477055, 3.424838)
+skew = 0.22863813
+sprite_frames = SubResource("SpriteFrames_4wrhg")
+animation = &"conf"
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="." unique_id=731933519]
+position = Vector2(249.06253, 434)
+scale = Vector2(0.5071558, 0.48853064)
+texture = ExtResource("8_howin")
+
+[node name="Label" type="Label" parent="." unique_id=1013659539]
+offset_left = 87.0
+offset_top = 356.0
+offset_right = 143.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7w8mw")

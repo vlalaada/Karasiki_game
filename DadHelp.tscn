@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://ndbnavndio2y" path="res://футбольный мяч.png" id="8_l8wx5"]
 [ext_resource type="Texture2D" uid="uid://g85gf1ahugq7" path="res://молоко.png" id="9_6kwdh"]
 [ext_resource type="Texture2D" uid="uid://n8qd1ew3ve10" path="res://хлеб.png" id="10_cu84p"]
+[ext_resource type="Texture2D" uid="uid://cqxoyf1pcj8kn" path="res://корги.png" id="12_3sgk6"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="13_byxmy"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="14_15cor"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xkh5i"]
 
@@ -80,11 +83,20 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.711337, 0.4756204, 0.9999973, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71qkm"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_564uo"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac5gp"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
+
 [node name="Node2D" type="Node2D" unique_id=1635409945]
 script = ExtResource("1_2ovep")
 
 [node name="Полки" type="Sprite2D" parent="." unique_id=932190271]
-position = Vector2(570.25, 329.00003)
+position = Vector2(583.00006, 329.00003)
 scale = Vector2(0.93288344, 0.8450521)
 texture = ExtResource("1_pag3v")
 
@@ -108,7 +120,7 @@ text = "яблоки
 "
 
 [node name="Яблоко" type="Sprite2D" parent="." unique_id=1213788703]
-position = Vector2(210, 149.00002)
+position = Vector2(197, 153.00002)
 scale = Vector2(0.34804684, 0.30372494)
 texture = ExtResource("4_3sgk6")
 
@@ -129,10 +141,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_xkh5i")
 text = "50"
 
 [node name="AppleButton" type="Button" parent="Яблоко" unique_id=163535160]
-offset_left = -215.48822
-offset_top = -279.85855
-offset_right = 224.10779
-offset_bottom = 233.76407
+offset_left = -226.9809
+offset_top = -246.93399
+offset_right = 212.61511
+offset_bottom = 266.68863
 theme_override_styles/normal = SubResource("StyleBoxFlat_r00xw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_15cor")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4oijp")
@@ -200,7 +212,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_6kwdh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sifje")
 
 [node name="Торттик" type="Sprite2D" parent="." unique_id=1828664074]
-position = Vector2(155.99998, 517)
+position = Vector2(201.99998, 519)
 scale = Vector2(0.37398097, 0.24932063)
 texture = ExtResource("7_15cor")
 
@@ -221,10 +233,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_xkh5i")
 text = "150"
 
 [node name="CakeButton" type="Button" parent="Торттик" unique_id=2029542768]
-offset_left = -288.78473
-offset_top = -279.85855
-offset_right = 267.3933
-offset_bottom = 356.97018
+offset_left = -475.96002
+offset_top = 36.098083
+offset_right = 80.21802
+offset_bottom = 672.9268
 theme_override_styles/normal = SubResource("StyleBoxFlat_r00xw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cu84p")
 theme_override_styles/hover = SubResource("StyleBoxFlat_byxmy")
@@ -361,6 +373,99 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_w83or")
 text = "Далее"
 
+[node name="Корги" type="Sprite2D" parent="." unique_id=1514322326]
+position = Vector2(432, 470)
+texture = ExtResource("12_3sgk6")
+
+[node name="ОкноДляВыбора2" type="Sprite2D" parent="Корги" unique_id=1462183672]
+position = Vector2(420.49997, -229.5)
+scale = Vector2(0.59347826, 0.44547874)
+texture = ExtResource("5_sifje")
+
+[node name="Label" type="Label" parent="." unique_id=1764596771]
+offset_left = 657.0
+offset_top = 160.0
+offset_right = 791.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2ovep")
+theme_override_font_sizes/font_size = 13
+
+[node name="Bla" type="Control" parent="." unique_id=1303917463]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("13_byxmy")
+
+[node name="Button" type="Button" parent="Bla" unique_id=1107564198]
+layout_mode = 0
+offset_left = 429.0
+offset_top = -152.0
+offset_right = 669.0
+offset_bottom = -125.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2ovep")
+theme_override_styles/normal = SubResource("StyleBoxFlat_71qkm")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=762745951]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=1423603515]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 479.547
+offset_top = -222.804
+offset_right = 720.547
+offset_bottom = -118.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_564uo")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=242046595]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 6.0
+offset_top = -50.000008
+offset_right = 244.0
+offset_bottom = 49.999992
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=805116235]
+layout_mode = 0
+offset_left = 421.0
+offset_top = -352.0
+offset_right = 666.0
+offset_bottom = -291.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ac5gp")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=1329678848]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = 426.0
+offset_top = -270.0
+offset_right = 666.0
+offset_bottom = -170.0
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=615526195]
+offset_left = -120.0
+offset_top = 438.00006
+offset_right = 1160.0
+offset_bottom = 1136.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("14_15cor")
+texture_pressed = ExtResource("14_15cor")
+texture_hover = ExtResource("14_15cor")
+
 [connection signal="pressed" from="Яблоко/AppleButton" to="." method="_on_apple_button_pressed"]
 [connection signal="pressed" from="Морковь/CarrotButton" to="." method="_on_carrot_button_pressed"]
 [connection signal="pressed" from="Медведь/BearButton" to="." method="_on_bear_button_pressed"]
@@ -370,3 +475,6 @@ text = "Далее"
 [connection signal="pressed" from="Хлеб/BreadButton" to="." method="_on_bread_button_pressed"]
 [connection signal="pressed" from="ButtonRetry" to="." method="_on_button_retry_pressed"]
 [connection signal="pressed" from="ButtonToNext" to="." method="_on_button_to_next_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]

@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bfc6f5c4mv3fr" path="res://качель.png" id="7_bqoe3"]
 [ext_resource type="Texture2D" uid="uid://be1jhyylsh37q" path="res://папа.png" id="8_l06et"]
 [ext_resource type="Texture2D" uid="uid://51tearf3iig3" path="res://окно для выбора длинное .png" id="9_kgrbn"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="10_bqoe3"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="11_l06et"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghn0t"]
 bg_color = Color(0.8117647, 0.7254902, 0.53333336, 1)
@@ -70,6 +72,15 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.5915421, 0.41106603, 0.7171436, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgrbn"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2v37"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ump26"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
 
 [node name="Node2D" type="Node2D" unique_id=149739624]
 script = ExtResource("1_57g6b")
@@ -245,6 +256,84 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_bqoe3")
 text = "Далее"
 
+[node name="Bla" type="Control" parent="." unique_id=1193657483]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("10_bqoe3")
+
+[node name="Button" type="Button" parent="Bla" unique_id=958051691]
+layout_mode = 0
+offset_left = 422.0
+offset_top = -149.0
+offset_right = 662.0
+offset_bottom = -122.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_0fcng")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgrbn")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=380830102]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=2044871561]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 479.547
+offset_top = -222.804
+offset_right = 720.547
+offset_bottom = -118.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_e2v37")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=1966654498]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 6.0
+offset_top = -50.000008
+offset_right = 244.0
+offset_bottom = 49.999992
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=1122920345]
+layout_mode = 0
+offset_left = 421.0
+offset_top = -352.0
+offset_right = 666.0
+offset_bottom = -291.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ump26")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=2114723080]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = 426.0
+offset_top = -270.0
+offset_right = 666.0
+offset_bottom = -170.0
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=381627621]
+offset_left = -78.0
+offset_top = 448.00006
+offset_right = 1202.0
+offset_bottom = 1146.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("11_l06et")
+texture_pressed = ExtResource("11_l06et")
+texture_hover = ExtResource("11_l06et")
+
 [connection signal="pressed" from="Качель/WalkButton" to="." method="_on_walk_button_pressed"]
 [connection signal="pressed" from="Папа/HelpDadButton" to="." method="_on_help_dad_button_pressed"]
 [connection signal="pressed" from="Label2/NextDayButton" to="." method="_on_next_day_button_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]
