@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ytg4chdvn6u8" path="res://счаст.png" id="2_xdomh"]
 [ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="3_gmqcc"]
 [ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="4_cj1v8"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="6_cj1v8"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="7_2pesb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pesb"]
 bg_color = Color(0.9655903, 0.7722691, 1, 1)
@@ -17,6 +19,15 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwnu4"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmi14"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki2ab"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1311765357]
 script = ExtResource("1_xdomh")
@@ -62,4 +73,82 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_2pesb")
 text = "Начать"
 
+[node name="Bla" type="Control" parent="." unique_id=1459474785]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("6_cj1v8")
+
+[node name="Button" type="Button" parent="Bla" unique_id=1816707272]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -187.0
+offset_right = 667.0
+offset_bottom = -160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_cj1v8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iwnu4")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=2030547560]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=309038051]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 483.547
+offset_top = -260.804
+offset_right = 724.547
+offset_bottom = -156.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmi14")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=2072491677]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 241.20105
+offset_bottom = 105.0
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=1818410879]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -381.0
+offset_right = 665.9949
+offset_bottom = -320.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ki2ab")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=938077360]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = -96.64229
+offset_top = -500.61502
+offset_right = 143.35771
+offset_bottom = -400.61502
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=209836087]
+offset_left = -76.0
+offset_top = 437.0
+offset_right = 1204.0
+offset_bottom = 1135.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("7_2pesb")
+texture_pressed = ExtResource("7_2pesb")
+texture_hover = ExtResource("7_2pesb")
+
 [connection signal="pressed" from="ButtonToEvening" to="." method="_on_button_to_evening_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]

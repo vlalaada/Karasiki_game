@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://brp0edfywx65n"]
+
+[ext_resource type="Script" uid="uid://c5mpinn06tny7" path="res://scence/пираты_game.gd" id="1_hp34x"]
+[ext_resource type="Texture2D" uid="uid://r7jxgoi0312f" path="res://пираты.png" id="1_ob0hs"]
+[ext_resource type="Texture2D" uid="uid://dohuwbt55e8wq" path="res://сундук1.png" id="2_ob0hs"]
+[ext_resource type="Texture2D" uid="uid://cge4p0akvnlvh" path="res://сундук2.png" id="3_4s5x1"]
+[ext_resource type="Texture2D" uid="uid://ddchmco8t1usl" path="res://сундук3.png" id="4_pxc3q"]
+[ext_resource type="Texture2D" uid="uid://cqxoyf1pcj8kn" path="res://корги.png" id="6_fmwba"]
+[ext_resource type="Texture2D" uid="uid://u01ane027y5e" path="res://окно  для выбора .png" id="7_mw838"]
+[ext_resource type="FontFile" uid="uid://cm8umwajx8rjj" path="res://PressStart2P-Regular.ttf" id="8_ah0rp"]
+[ext_resource type="Texture2D" uid="uid://51tearf3iig3" path="res://окно для выбора длинное .png" id="9_fmwba"]
+[ext_resource type="Script" uid="uid://c1extvqjr4ki" path="res://scence/bla.gd" id="10_ah0rp"]
+[ext_resource type="Texture2D" uid="uid://olcp3dmb0or3" path="res://карась.png" id="11_ie3dx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp34x"]
+bg_color = Color(0.81178766, 0.72538966, 0.9138015, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8254967, 0.46934992, 0.9902491, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmwba"]
+bg_color = Color(0.81178766, 0.72538966, 0.9138015, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8254967, 0.46934992, 0.9902491, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33vp1"]
+bg_color = Color(0.8708131, 0.5573911, 0.79094994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ebuw"]
+bg_color = Color(0.8153336, 0.22623393, 0.54036766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cuutr"]
+bg_color = Color(0.998789, 0.7124757, 0.763237, 1)
+
+[node name="Node2D" type="Node2D" unique_id=692909214]
+script = ExtResource("1_hp34x")
+
+[node name="Пираты" type="Sprite2D" parent="." unique_id=1201454378]
+position = Vector2(597.99994, 324.75)
+scale = Vector2(0.85866475, 0.86653656)
+texture = ExtResource("1_ob0hs")
+
+[node name="Сундук1" type="TextureButton" parent="." unique_id=2145494637]
+offset_left = 105.0
+offset_top = 301.0
+offset_right = 1385.0
+offset_bottom = 999.0
+scale = Vector2(0.32656252, 0.44340977)
+texture_normal = ExtResource("2_ob0hs")
+texture_pressed = ExtResource("2_ob0hs")
+texture_hover = ExtResource("2_ob0hs")
+
+[node name="Сундук2" type="TextureButton" parent="." unique_id=917918847]
+offset_left = 380.0
+offset_top = 274.0
+offset_right = 1660.0
+offset_bottom = 972.0
+scale = Vector2(0.33457035, 0.4656161)
+texture_normal = ExtResource("3_4s5x1")
+texture_pressed = ExtResource("3_4s5x1")
+texture_hover = ExtResource("3_4s5x1")
+
+[node name="Сундук3" type="TextureButton" parent="." unique_id=753162323]
+offset_left = 660.0
+offset_top = 283.0
+offset_right = 1940.0
+offset_bottom = 981.0
+scale = Vector2(0.3046875, 0.44126076)
+texture_normal = ExtResource("4_pxc3q")
+texture_pressed = ExtResource("4_pxc3q")
+texture_hover = ExtResource("4_pxc3q")
+
+[node name="Корги" type="Sprite2D" parent="." unique_id=576575697]
+position = Vector2(358, 505)
+texture = ExtResource("6_fmwba")
+
+[node name="ОкноДляВыбора" type="Sprite2D" parent="Корги" unique_id=380532148]
+position = Vector2(362.99997, -206)
+scale = Vector2(0.5333333, 0.38779926)
+texture = ExtResource("7_mw838")
+
+[node name="Label" type="Label" parent="Корги" unique_id=1603689027]
+offset_left = 200.0
+offset_top = -267.0
+offset_right = 240.0
+offset_bottom = -251.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_ah0rp")
+
+[node name="ButtonRetry" type="Button" parent="." unique_id=1372680050]
+process_mode = 3
+offset_left = 725.0
+offset_top = 418.0
+offset_right = 1141.0
+offset_bottom = 518.17395
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_ah0rp")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_hp34x")
+text = "Попробовать 
+снова"
+
+[node name="ButtonEvening" type="Button" parent="." unique_id=336287230]
+process_mode = 3
+offset_left = 726.0
+offset_top = 534.0
+offset_right = 1142.0
+offset_bottom = 634.17395
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_ah0rp")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_fmwba")
+text = "Перейти к вечеру"
+
+[node name="ОкноДляВыбораДлинное" type="Sprite2D" parent="." unique_id=1871598773]
+position = Vector2(639, 53.9375)
+scale = Vector2(0.48115945, 0.2554854)
+texture = ExtResource("9_fmwba")
+
+[node name="Label" type="Label" parent="." unique_id=14731196]
+offset_left = 243.0
+offset_top = 35.0
+offset_right = 1043.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_ah0rp")
+theme_override_font_sizes/font_size = 20
+text = "Выбери один из трёх сундуков"
+horizontal_alignment = 1
+
+[node name="Bla" type="Control" parent="." unique_id=427716647]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -412.0
+offset_top = 558.0
+offset_right = -229.0
+offset_bottom = 634.0
+script = ExtResource("10_ah0rp")
+
+[node name="Button" type="Button" parent="Bla" unique_id=957628406]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -187.0
+offset_right = 667.0
+offset_bottom = -160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_ah0rp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_33vp1")
+text = "ЗАДАТЬ ВОПРОС"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Bla" unique_id=912789904]
+
+[node name="ChatWindow" type="Panel" parent="Bla" unique_id=1587154780]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.30900002
+anchor_top = -0.62100005
+anchor_right = -0.30900002
+anchor_bottom = -0.62100005
+offset_left = 483.547
+offset_top = -260.804
+offset_right = 724.547
+offset_bottom = -156.804
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ebuw")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bla/ChatWindow" unique_id=72770061]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = -3.0
+offset_top = 5.0
+offset_right = 236.20105
+offset_bottom = 105.0
+horizontal_scroll_mode = 0
+
+[node name="LineEdit" type="LineEdit" parent="Bla" unique_id=2002731439]
+layout_mode = 0
+offset_left = 427.0
+offset_top = -381.0
+offset_right = 665.9949
+offset_bottom = -320.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_cuutr")
+placeholder_text = "Введите текст"
+
+[node name="DisplayLabel" type="Label" parent="Bla" unique_id=1760449326]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 0
+offset_left = -96.64229
+offset_top = -500.61502
+offset_right = 143.35771
+offset_bottom = -400.61502
+autowrap_mode = 2
+
+[node name="OpenChatButton" type="TextureButton" parent="." unique_id=1330372496]
+offset_left = -76.0
+offset_top = 437.0
+offset_right = 1204.0
+offset_bottom = 1135.0
+scale = Vector2(0.30625, 0.35243553)
+texture_normal = ExtResource("11_ie3dx")
+texture_pressed = ExtResource("11_ie3dx")
+texture_hover = ExtResource("11_ie3dx")
+
+[connection signal="pressed" from="Сундук1" to="." method="_on_сундук_1_pressed"]
+[connection signal="pressed" from="Сундук2" to="." method="_on_сундук_2_pressed"]
+[connection signal="pressed" from="Сундук3" to="." method="_on_сундук_3_pressed"]
+[connection signal="pressed" from="ButtonRetry" to="." method="_on_button_retry_pressed"]
+[connection signal="pressed" from="ButtonEvening" to="." method="_on_button_evening_pressed"]
+[connection signal="pressed" from="Bla/Button" to="Bla" method="_on_button_pressed"]
+[connection signal="request_completed" from="Bla/HTTPRequest" to="Bla" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="OpenChatButton" to="Bla" method="_on_open_chat_button_pressed"]
