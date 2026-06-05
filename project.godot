@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="фурриганьё"
-run/main_scene="uid://bhuw10efq2iop"
+run/main_scene="uid://bkysfo0s0thm4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameState="*uid://cmslstyoau1c4"
+
+[network]
+
+tls/enable_tls_v1.3=false
 
 [physics]
 
